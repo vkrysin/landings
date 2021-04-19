@@ -156,7 +156,7 @@ header {
 // advantages styles
 
 .advantages {
-  margin-top: 65px;
+  margin-top: 47px;
   padding: 0 70px;
 
   display: grid;
@@ -207,4 +207,28 @@ header {
   font-size: 14px;
   line-height: 1.8;
   color: #686868;
+}
+
+// works styles
+
+.works {
+  margin-top: 110px;
+  padding-bottom: 140px;
+  height: auto;
+  background:
+    url(img/works/Shape1.png) no-repeat,
+    url(img/works/Shape1copy.png) no-repeat;
+  background-position: center top;
+
+  & .header { background-color: transparent; }
+
+  & .header__img { margin-top: 57px; }
+
+  & .header__h2 { margin-top: 35px; }
+
+  & .works__header {
+    margin-top: 12px;
+    padding: 0 83px;
+    letter-spacing: 0.05em;
+  }
 }
