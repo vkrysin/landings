@@ -1,0 +1,178 @@
+
+// smaller than 1400px
+
+@media screen and ( max-width: 1400px ) {
+  .header__description__second-line { display: inline; }
+}
+
+@media screen and ( max-width: 1200px ) {
+  .carousel-item { margin-top: 90px; }
+  .carousel-slide__description { margin-top: 25px; }
+  .carousel__btn { margin-top: 70px; }
+
+  .carousel-indicators {
+    margin-left: 40%;
+    margin-bottom: 5rem;
+  }
+}
+
+@media screen and ( max-width: 992px ) {
+
+  .carousel-item {
+    margin-top: 100px;
+  }
+
+  & .about {
+    .header__img { height: 220px; }
+  }
+  .advantages {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4, auto);
+
+    & .item:nth-child(n + 1) { margin-top: 40px; }
+  }
+
+  .navbar {
+    & .nav-item:first-child {
+      margin-left: 0;
+    }
+  }
+
+  .projects {
+    grid-template-columns: repeat(2, minmax(200px, 340px));
+    grid-template-rows: repeat(4, 300px);
+
+    & .item:nth-child(2) { border-right: 1px solid #f02020;}
+    & .item:nth-child(5) { border-bottom: none; }
+    & .item:nth-child(6) {
+      border-bottom: none;
+      border-right: 1px solid #f02020;
+    }
+  }
+
+  .contacts {
+    padding-top: 20px;
+
+    & form {
+      margin-top: 50px;
+
+      & input, textarea {
+        font-size: 15px;
+        letter-spacing: 0.16em;
+      }
+
+      & .btn {
+        width: 250px;
+        height: 70px;
+        font-size: 15px;
+        letter-spacing: 0.16em;
+      }
+    }
+  }
+
+  footer {
+    margin-top: 50px;
+
+    & .description {
+      margin-top: 40px;
+      font-size: 15px;
+    }
+    & .social {
+      margin-top: 40px;
+      justify-content: start;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .carousel-item { margin-top: 50px; }
+  .carousel-slide__description { margin-top: 25px; }
+  .carousel__btn { margin-top: 50px; }
+
+  .header__description,
+  .works .works__header,
+  .contacts .header__description {
+    padding: 0;
+  }
+
+  .about {
+    & .header__img { height: 160px; }
+  }
+
+  .projects { grid-template-rows: repeat(4, 250px); }
+
+  .works { padding-bottom: 80px; }
+
+  .contacts {
+
+    & form {
+      margin-top: 20px;
+
+      & .row:first-child { flex-direction: column; }
+
+      & input { margin-bottom: 20px; }
+    }
+  }
+}
+
+@media screen and (max-width: 426px) {
+
+  .logo { padding-left: 15px; }
+
+  .carousel-inner {
+    min-height: 560px;
+    padding-left: 15px;
+   }
+  .carousel-slide__header-text { padding-right: 50px; }
+  .header-text { font-size: 25px; }
+  .header__description { font-size: 14px; }
+  .carousel-indicators { margin-left: 50%; }
+
+   .about {
+     & .header__img { height: 120px; }
+   }
+
+   .works  {
+      & .filter {
+          margin-top: 50px;
+      }
+    }
+
+    .projects {
+      grid-template-columns: auto;
+      grid-template-rows: repeat(8, 220px);
+    }
+
+    footer {
+      .col-12:first-child { padding-left: 30px; }
+
+      .social { margin-top: 10px; }
+    }
+
+}
+
+@media screen and (max-width: 376px) {
+  .carousel-indicators { margin-left: -35%; }
+  .about {
+    & .header__img { height: 100px; }
+    & .header__h2__text { word-spacing: 0px; }
+  }
+
+  .advantages {
+    & .item { flex-direction: column; }
+    & .item:nth-child(n + 1) { margin-top: 5px;}
+
+    & .item__header { margin-top: 10px; }
+  }
+
+  .contacts {
+    form .btn {
+      width: 170px;
+      height: 50px;
+      font-size: 13px;
+      letter-spacing: 0.10em;
+    }
+  }
+}
+
