@@ -23,11 +23,10 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "@popperjs/core": "^2.9.2",
     "bootstrap": "^5.0.0-beta3",
     "lodash": "^4.17.20",
     "normalize.css": "^8.0.1",
     "reset-css": "^5.0.1"
-  },
-  "main": "index.js",
-  "description": ""
+  }
 }

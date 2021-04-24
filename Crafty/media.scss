@@ -1,5 +1,5 @@
 
-// smaller than 1400px
+// smaller than
 
 @media screen and ( max-width: 1400px ) {
   .header__description__second-line { display: inline; }
@@ -86,6 +86,7 @@
 
 @media screen and (max-width: 768px) {
 
+  header { padding-left: 30px; }
   .carousel-item { margin-top: 50px; }
   .carousel-slide__description { margin-top: 25px; }
   .carousel__btn { margin-top: 50px; }
@@ -97,7 +98,7 @@
   }
 
   .about {
-    & .header__img { height: 160px; }
+    & .header__img { height: 140px; }
   }
 
   .projects { grid-template-rows: repeat(4, 250px); }
@@ -149,7 +150,6 @@
 
       .social { margin-top: 10px; }
     }
-
 }
 
 @media screen and (max-width: 376px) {

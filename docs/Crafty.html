@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"> -->
+    <!-- <link rel="stylesheet" href="custom.css"> -->
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-2 logo">
+            <img src="data:image/png;base64,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" alt="logo">
+          </div>
+          <div class="col-1 offset-8">
+            <div class="menu">
+              <!-- how to add responsive menu? -->
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-9 col-sm-12 pl-0">
+            <div class="carousel slide" id="header-carousel" data-bs-ride="carousel"  data-bs-interval="false">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="carousel-slide">
+                    <h2 class="header-text carousel-slide__header-text">
+                      LOREM IPSUM DOLOR SIT AMET CONSECTETUR ADIPISCING ELITIAM
+                    </h2>
+                    <p class="description carousel-slide__description">
+                      Etiam non nunc fermentum ante iaculis ultricies. Aenean posuere tincidunt elit, et egestas leo semper ut. Etiam tincidunt, ligula ac sollicitudin placerat, dolor nulla ultrices magna, eget tristique diam tellus sit amet erat.
+                    </p>
+                    <a class="carousel__btn" href="#">LEARN MORE</a>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="carousel-slide">
+                    <h2 class="header-text carousel-slide__header-text">
+                      Slide 2
+                    </h2>
+                    <p class="description carousel-slide__description">
+                      Etiam non nunc fermentum ante iaculis ultricies. Aenean posuere tincidunt elit, et egestas leo semper ut. Etiam tincidunt, ligula ac sollicitudin placerat, dolor nulla ultrices magna, eget tristique diam tellus sit amet erat.
+                    </p>
+                    <a class="carousel__btn" href="#">LEARN MORE</a>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="carousel-slide">
+                    <h2 class="header-text carousel-slide__header-text">
+                      Slide 3
+                    </h2>
+                    <p class="description carousel-slide__description">
+                      Etiam non nunc fermentum ante iaculis ultricies. Aenean posuere tincidunt elit, et egestas leo semper ut. Etiam tincidunt, ligula ac sollicitudin placerat, dolor nulla ultrices magna, eget tristique diam tellus sit amet erat.
+                    </p>
+                    <a class="carousel__btn" href="#">LEARN MORE</a>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#header-carousel" data-bs-slide-to="0" class="active"
+                  aria-current="true"></button>
+                <button type="button" data-bs-target="#header-carousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#header-carousel" data-bs-slide-to="2"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="about">
+      <div class="container">
+        <div class="row">
+          <div class="col header">
+            <span class="header__img">
+              <img src="img/iMac.png" alt="iMac">
+            </span>
+            <span class="header__h2">
+              <h2 class="header-text header__h2__text">WE’  RE  CRAFTY</h2>
+            </span>
+            <p class="description header__description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Maecenas diam sapien, auctor sed blandit nec, adipiscing eget
+              <span class="header__description__second-line">elit. Duis tempor elementum quam consequat condimentum.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col advantages">
+            <div class="item">
+              <div class="item__img">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAkCAYAAACTz/ouAAACR0lEQVRIiaWX24uOURTGf2aGnOLCOOWYCwkZkQmRvwBFXFDCjbhRJuRace1CknIobpBIaERRI8okpJBTM4PQODUy5dyq9dWyZr/73fudp3a9rfWs59l7f/v0DSCOscByYAkwHWgEpOYT8BK4BVwEOkp0+mCZFvYCf0vaH+A6sDJV/GBEUMR+R/Iny8QvBYpaga1AMzAZmAjMBzYD5wL8dmBoSPyCI14DliaMuAk442rveVKLI2xPnU+DdU7jUC01yiV2RkTGAQt0dYWwwWnNEs4uE3hd0stjhvsEWBHgtBvOAQmcNoGWEoMZwDbghKnZ6DirTO6GBB6YQFOJgcVA4LLWTTNx2Yw/NN4lga/GYFKGgWCq1q01sXrgs8Z7JPDUGMzJNKjXY2S4icmi+al67+uAZya5MNNAdnUb8M3E5gEN+t0pBg9NckemQQh7TOwRuvXt2t3dD/FNTqu5ltjvEmsqiC92Gmc94a4jLMoQnwL8cht2kCcNA14ZkvxwIxMNnpu6Hl2+QTSaJSbtZoL4UTfymWUF613B3Ah3QsZB+R/umKJTEd5ew+tMFUd7XSuUc2VwAa/D8FbnGAiuhtazgb1HHheJNBQlgG7zfRx4oU8WVHR8ATcJWxKeK77tyzHwmy6lfQgJ1RUYHMkdMnA4x+B7BYPeHPLtClP0JmcEVyqMoDW34H5G798CQ3INujKnqM/xTGSKiO3OAGrHdRZG6PvyXaTXcmfII0xO1coYo5vIi8sNNrs/whaj9c/FR+ALcF6fkXEA/wCEMxTNeRPFiwAAAABJRU5ErkJggg==" alt="light">
+              </div>
+              <div class="item__text">
+                <h2 class="header-text item__header">WE’RE CREATIVE</h2>
+                <p class="description item__description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam.</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item__img">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAACoPemuAAACEklEQVRYhc2YTWsTQRjHf7USpRV8QaEvH6ClQiB6lXrpwVOEgoWe+gFKAxX6BXqpUgVPgopKG3tSDAqFImKhPQjqJTTQFuJBSxFbQRSqGNTIwKysYXZ3Zmd27B+ew2b++8xvmWef2Ukb2WsEuADkgS7gN7ALrAFLQAX44YHjr4pAHWgmxA4w6QvqvgZQOJ76gHpiAPQWGPUBNWMAdQVo9wHVY7BseR9AgW4mAFXl2+lVOeB7Ati0CdABR/RngMMJnmMmCV2B9Wl4jJq5K7BODc9Pg3znXIF90/DogJ0FVmU40aBGm/gAjMdMdjXkbbgCE4X/S7OPibYxHLr3IrCp8DnTnOH+OA/cihhbdwH1COgHjhiCxcWQLVRZJn8ur284gHpsCzXbkrAof1+xgKqZ9rtWXY9I3Ct9lRRQy0CHDdRCTPI9oCB9l4DPGkDCM2UDJFTWfPrL0i+WpQQsAu/lRi9iG3gGTADHbaGuGS7NR2AgdL+APAmcAg7awqSFaspt6rQrAJVMG6eIV7KvZaa7KaFcfRwolWb59iVUPWuoOymgXgMnsoTalzUVtc3ExRvfUJ+A8/JgWosAewccyhKqpJj0Xmh8TDFelR08U31RTLwlt5Nu4KWiprz856ACC6LRcp15TQUST35UnONixgOJr4OC4fnQWg8T3r4NHzUVpdsxfSr3v6ACPQC+huKFr5r6R8AfcUatY83O8moAAAAASUVORK5CYII=" alt="open">
+              </div>
+              <div class="item__text">
+                <h2 class="header-text item__header">WE WORK HARD</h2>
+                <p class="description item__description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam.</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item__img">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAkCAYAAAAQC8MVAAADAElEQVRYheWYW4hNURjHf2ccQ8b9FpF7MuNFmRi58yg1HuRBnj3Mixclyr15k7zxxijKC3miFOIJD5QoRbnFmWHGpTHMMXO06ttaZ7e+tffa59iSf+3OOWt961v/863vsr5dIBvmABeAWbK6klFPGjQAA8DhrAqOCME8n75iRrIjM6wpy6c5zWGgMXB9f0OGTQ1+BMrvEdeZK5/maQbehuyZ1bKhuA68j60pAS8tv09EVsuGYqYiPzpET15k64K8fHaEMt4UoiQr2dBsMKyMfw9RkhRgi4EOYJPlXz+B6Yp8J3DWKhIFeV4r8luBMcCQNbYEuOI5DSfaJDeGJP62kA086Hfofq5ZdgFwJ2b5IbFSRdzHVaq1qA/BFEW302cN0QcWUUNuoyT0KKmfrAOpYMQtO1+ITpLfg8Bm4G5MTqs8H+rA6aN2MbLJzo4R/SI++NSxbpyyUStwXzaLjrIgqc6VERqFQzRXkTKceG94HHPoFo/sIU+Q9QDd8vSItdcoem6IJSP5kieofwfYamCpfDfK1wNPPGS/eeamOsa05L8QmOzRVYWIbLM1eE2IakeN5SppMajI9QLzQsmWrbF24LOWPgShd9G6ICJrO//YP7BPrzIeVG7zunW5grUptIjkdfnuAo5brmWq4UQlGFXkRbYolbEm/BeX77+CiOzAv0Q2Td4MbWXSoBy6oF3aZK3WPwPWAtOAdcCjOryFOSGVa4Z0ImnWmLadNx6BT47abfqvdzUQveww2M4U674awd1yxC6B08ppHK2B7HJFp88AJi8fMPnvDHAVmCDN4HZp/PCUQ9t/DwIXvY4G563+TLvURE2jKc2rrCtAUXoyZ9O5yPpH3Urb/cKSWZFA1OCUJd/lmN9izd9Loa8Kr2KLWyRjmDvvzZgfpckkrbFj3QeMB0YBO+QEo7nOFPqqsMHhN66MsS1A5yVH8JZiY33ijsHYnxAoewMVGne65dFnXMvXSiViGXBOnNs0kMY9zOv5lTXo3AXclkAyOh8CxxJfSQG/AEvhQiQ2AjK9AAAAAElFTkSuQmCC" alt="ambulance8">
+              </div>
+              <div class="item__text">
+                <h2 class="header-text item__header">DELIVER ON TIME</h2>
+                <p class="description item__description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam.</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item__img">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAkCAYAAADo6zjiAAAC1UlEQVRYhbWXX2jOURjHP0NDkoXeZdJiW17/lsyFlH9XlCgjzcWk3Pjb4kLL2gWitJthKzco0iQpV5ILuZWitFjCeP1by5QNM3+mU8/R4zi/9/f+fuf11Hl7f+d8n+f7Ped3nuecXwnJLQM0AKuBGmAiMAj0ALeAS8CPFHELslZgCBjN03LA7v9Bfj2G2G0dxSS/nJDctuZikG9JSW5bRaiAXKCAayHkCwPJbZsaRTAmRsDKEPXKlqUVMLNIAmalFZCmUCWKEyfgXZEEvE3ruKRIm7A8RP3HQPI7IeTGDgYKWBoqwNjNlORtxSC3djch+ZUQsslAtaf/dIHkrR7fLFBaCHmTbLx61bdZldNa4ALwCOgDPkm6PhCBUwQ3D1inYhySc2VTPvKrahYT1GqY52FgTyEzAFrEp1f1ZVXsdp/TKQV4pfprnOV9CXQCW2U1qoA6YDtwXq5nFvtUxSmXq5oda9Lk7qmXU+WzOiAFexwB7nhmnAwecVajRJoFJrVzwA2gO8av0fxM8yh7o86JqgQzNptyQQSZmdBGB//QDOyICGYFZBMImFvAStUr/HfTccYTqEXtAZMFZwsgP+kQnQBeAE+A/c7YbfExG/af6/aaCOUNMQJmK2ynZ3yXGt8gfZ/Nwz0FOuZ5b9raI8j7FSYTgXmvMHOk7xdSLEYlR8sUcZvUg73KsUKc3ODPFWZRhIABwGZdpc6wfvnzQQUpc5ytmVr+1RN8SGGibtIjSoAubn8qlwFMEoABdknfcRV8OvDTE/yiwpgY9z2YLvVKzQftYytgQIH+Ko/ADOf5cMTs3Nvzeg+m0sE0WgHdCmTe73z8tiJPBix3PA54MKsczFErwP3wNK9kp9TuUlHeHJOCz4DFwHiZve8TvlcwpXJMj1gBtRFBhyV14gqQbn0JMa/tcmwDviQkC21GSJ0uNCbH9wFrpVCMjdgLIfZNdr+55HYAg78BrAMDlNQMxWMAAAAASUVORK5CYII=" alt="user">
+              </div>
+              <div class="item__text">
+                <h2 class="header-text item__header">UNLIMITED SUPPORT</h2>
+                <p class="description item__description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="works">
+      <div class="container">
+        <div class="row">
+          <div class="col header">
+            <span class="header__img">
+              <img src="data:image/png;base64,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" alt="heart">
+            </span>
+            <span class="header__h2">
+              <h2 class="header-text header__h2__text">WE’RE CREATIVE</h2>
+            </span>
+            <p class="description header__description works__header">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Maecenas diam sapien, auctor sed blandit nec, adipiscing
+              <span class="header__description__second-line">eget elit. Duis tempor elementum quam consequat condimentum.</span>
+            </p>
+          </div>
+        </div>
+         <div class="row">
+            <div class="col-6 filter">
+              <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                      <li class="nav-item"><a href="#" class="nav-link">All</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link">Branding</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link">Web</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link">Photography</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link">Ui/ux</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link">Development</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+            </div>
+         </div>
+        </div>
+        <div class="projects container">
+              <div class="item hidden">
+                <h2 class="project__header header-text"></h2>
+                <div class="description project__description"></div>
+                <button class="project__btn btn">
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAP0lEQVRYhe3WMQ0AIBDF0IbgC1ngHkR0YOkX0LzbDrljA8MGAgQIECBAgAB2E9iisYD784AekgABAgQIEMANeFKIAuTtxzvnAAAAAElFTkSuQmCC" alt="across">
+                </button>
+              </div>
+              <div class="item hidden">
+                <h2 class="project__header header-text"></h2>
+                <div class="description project__description"></div>
+                <button class="project__btn btn">
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAP0lEQVRYhe3WMQ0AIBDF0IbgC1ngHkR0YOkX0LzbDrljA8MGAgQIECBAgAB2E9iisYD784AekgABAgQIEMANeFKIAuTtxzvnAAAAAElFTkSuQmCC" alt="across">
+                </button>
+              </div>
+              <div class="item hidden">
+                <h2 class="project__header header-text"></h2>
+                <div class="description project__description"></div>
+                <button class="project__btn btn">
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAP0lEQVRYhe3WMQ0AIBDF0IbgC1ngHkR0YOkX0LzbDrljA8MGAgQIECBAgAB2E9iisYD784AekgABAgQIEMANeFKIAuTtxzvnAAAAAElFTkSuQmCC" alt="across">
+                </button>
+              </div>
+              <div class="item hidden">
+                <h2 class="project__header header-text"></h2>
+                <div class="description project__description"></div>
+                <button class="project__btn btn">
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAP0lEQVRYhe3WMQ0AIBDF0IbgC1ngHkR0YOkX0LzbDrljA8MGAgQIECBAgAB2E9iisYD784AekgABAgQIEMANeFKIAuTtxzvnAAAAAElFTkSuQmCC" alt="across">
+                </button>
+              </div>
+              <div class="item hidden">
+                <h2 class="project__header header-text"></h2>
+                <div class="description project__description"></div>
+                <button class="project__btn btn">
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAP0lEQVRYhe3WMQ0AIBDF0IbgC1ngHkR0YOkX0LzbDrljA8MGAgQIECBAgAB2E9iisYD784AekgABAgQIEMANeFKIAuTtxzvnAAAAAElFTkSuQmCC" alt="across">
+                </button>
+              </div>
+              <div class="item hidden">
+                <h2 class="project__header header-text"></h2>
+                <div class="description project__description"></div>
+                <button class="project__btn btn">
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAP0lEQVRYhe3WMQ0AIBDF0IbgC1ngHkR0YOkX0LzbDrljA8MGAgQIECBAgAB2E9iisYD784AekgABAgQIEMANeFKIAuTtxzvnAAAAAElFTkSuQmCC" alt="across">
+                </button>
+              </div>
+              <div class="item item_active">
+                <h2 class="project__header header-text">PROJECT TITLE </h2>
+                <div class="description project__description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas diam sapien,
+                </div>
+                <button class="project__btn btn">
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAP0lEQVRYhe3WMQ0AIBDF0IbgC1ngHkR0YOkX0LzbDrljA8MGAgQIECBAgAB2E9iisYD784AekgABAgQIEMANeFKIAuTtxzvnAAAAAElFTkSuQmCC" alt="across">
+                </button>
+              </div>
+              <div class="item hidden">
+                <h2 class="project__header header-text"></h2>
+                <div class="description project__description"></div>
+                <button class="project__btn btn">
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAP0lEQVRYhe3WMQ0AIBDF0IbgC1ngHkR0YOkX0LzbDrljA8MGAgQIECBAgAB2E9iisYD784AekgABAgQIEMANeFKIAuTtxzvnAAAAAElFTkSuQmCC" alt="across">
+                </button>
+
+         </div>
+      </div>
+    </section>
+    <section class="contacts">
+      <div class="container">
+        <div class="row">
+            <div class="col header">
+              <span class="header__img">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABJCAYAAACesWDiAAAE/UlEQVR4nOWbe4hVRRzHPz62XTdTC8ksiKzMJSNpA6MXZalZlGX5j0ZZQvSCqD+MJCgjyiCopOhBlFESBRWEmvTw8Uf5QHArK7HosWlEJW1bW666tvGL35W7d889z5k5c8cP7LL3zjm/M+e7v5n5zcxvhvR/x+HKUcB44ERgLNAMtACtwBigF3h1+GEizinAmcA5+vcE4HgVKI6pIQs0HZihP2fltDE+NIGuBc4DrgJOM2CvKxSBrgfukiZh2O7+RhfoDOARYLYl+weGWjJsm6OBZ4DtFsUR+hrRg64Dnteh2Tb7Gs2D7gfeciSO8E+jeNBJwOPAXMfP/bURBJoEbNXINw8fAJs1UpbmeWoGGzt9n2rMAlYCef+RIsg7Nd8tBe5Lef+5Pgt0M/Byznv3A9OAjXXKV2jsFMde4FhfO+m7C4gjbIkRR3gihY1PgR4fBVoCPFnQxs8J5d8A/yZc87n88k2gB4AHDdhpSSiXMGFIwjXv4ZlAIs5DhmwlzckuTRCoD3gfjwS6yaA4wnHAs3XKZLi/N+H+tRJFU2D4NMl8YLkFu7cDE4HXgI+BkcDVwEINPONYUSkre5i/Alhdag2ikRXHHyhZIPmP/lXa0+vzPXBypbSsPmg0sKGkZyexuLq8LA/aAbSV8uR4Omv7J9udtAylR2pzatX4ZImn4giLar/I4kEjgAXAKOAIoElfuEWHzladcY/SfaUR+rkiUJPptzHMgL6nQhYPegmY5/ELFmVx1P1pPahN+41QkXnXlKh3SzuKvRuwOBJqXFmvMI1ADxvahPOVO4Bd9eqW1MSadRM/VL4CJse9W5IHLQ1YHJlKXJh0UZwHyUTva9O18oQDOt/6Kak6cR4ks+BQWZRGnDiBFmguTYjIcu6ytO9Vr4n9Iiv6AYqzTDcEUhPlQbcEKs5nWcUhwoNO0BntMJM18wDZXZ0je+1Zq1I7F3szQHFk3emyvDdXNzGZyZ5vpk7e0AHMLFKZaoGeC0OTQ0iY0q4xT24qAt1QVGnPeAW40USVpJOWha3fdGErBJ4C7jH1HtJJvxCQOJLp+rRJgyJQT4H7JQngDc02nWOwXlnp19xo43tslTjobU3CTkOnhgMfAh9VXf9t1JquA7qBizQQNE51oCiZo7dGPKALWA9sAzYB6+pU4hj1phmOBdpqIYH8ENWB4m26CzFfI05xV0lfW5WyGf6uI+EaTZ1zRb/N50RNVuXgx24d2fIwVPsmV83tE+ACW8ajJqsdBcRBM7fa1ZNcYHVJ2NbefLdmbnRYsl/NPpvGbScvTNPmZpM+m8ZtC9Stza3eyGeCzEsYWXCR/tKjOYE7Ldn/w5Ld/3GZH3S2pe3rIjOBRFwK9Lc2t02G7XYbtjcA1xlmvbpZZ3J0C6aJVTio3mQKk7YGUYZA7YYj3z8N2hpEGQKlXTVIS1B9ELonbpJgRjF09WC6YZt7DdsbgGuBZlnYtf3RsL0BuBboGoO2+vTUYJdBm4NwKVCTniE1wYvA6cDrtivt8rTP5Zo/XYT1eorH1rxuEC49qEjzkmZ0J3CJS3FweFZjpC7jjs54X69uiT8K7LFUt1hcNbGLc4izUptTqlQ5W7hqYuMyXNup++qzyxYHhwKt0bPscezRg70TfUogdX1ebIPugtayXBMOrM6r8uA6UJS+6Iuqz1/q6LbQR3Eo6cShHNmWZEo5RPKYrg/5CfAfFJ3mys57/w8AAAAASUVORK5CYII=" alt="rocket">
+              </span>
+              <span class="header__h2">
+                <h2 class="header-text header__h2__text">GET IN TOUCH</h2>
+              </span>
+              <p class="description header__description works__header">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Maecenas diam sapien, auctor sed blandit nec, adipiscing
+                <span class="header__description__second-line">eget elit. Duis tempor elementum quam consequat condimentum.</span>
+              </p>
+            </div>
+        </div>
+        <form>
+          <div class="row">
+            <div class="col">
+              <input type="text" class="form-control description" placeholder="YOUR NAME" aria-label="YOUR NAME" >
+            </div>
+            <div class="col">
+              <input type="text" class="form-control description" placeholder="YOUR EMAIL" aria-label="YOUR EMAIL">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control description" placeholder="SUBJECT" aria-label="SUBJECT">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <textarea class="form-control description" placeholder="YOUR MESSAGE TEXT" id="Textarea"></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <button class="btn btn-primary contacts__btn" type="submit">CLICK TO SEND</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-sm-6 col-12">
+            <p class="description">
+              Copyright by <br>
+              <span class="description_semi-bold">ABDULLAH NOMAN</span>
+            </p>
+          </div>
+          <div class="col-lg-3 col-sm-6 offset-lg-6 col-12">
+            <div class="social">
+              <a class="social__item social__item_blue" href="#">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAhCAYAAAAGcPEMAAAA3UlEQVQ4je2UMQrCQBBFX6KFjSDY2VlYegNLLQURsfKEHiCNfQorD6AXsFPUKmRkg4FlspMIafNhITv8x86fJBuJCIbGwBaYA1NgULE5OLAOIvKUBoXAnYjkTaCTbtu1dgMmVhZfsdov/gWd+mq/rPFmQAKkwL04WOVNaiKu9Xw0fDHATERiDevMVt4XkDcNbGjA2lfIf1W931AsRbrupn3ynutU+kp93Mnmx92gNJjlT51bwW3anrkh7b3C0TC+gY2qXfVfZXXxAEa62CZzB3dwB4ekL72V4aveqsAXTpr87uOL3JMAAAAASUVORK5CYII=" alt="facebook">
+              </a>
+              <a class="social__item social__item_maroon" href="#">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAhCAYAAAC4JqlRAAAD/0lEQVRYhZ2YW4jXVRDHP6tbaV7+u5J4yaRI08IiwcQiM7XCfLCioNZIF2K7Pwj2IkEEBUWBiUqUPUTRSxRBhQ9RKq4RVnbRXkxdt8guqLubtppp7jcG5gfT6Xf7O3D475nL98yZM7+Zc7ZFEudAI4FpwGg3HQR6gJPNQrXW1BsGLAA6/Hc60JLo2E4OAluBd4BtwFAlskWgZAyTtELSXjVP+yStdIzCNcqOwHb5NjA34Z8CuoDvgQFgODAJmAIsBJYAlwb9L4BOYG8zEVgm6XjYc7ekz8P8uYrI3SxpW9D/U9Jdebp5xh2S/nHDPyTd7/xLJPU73+Q3Vjhh4z5JfcFmRZUDt0s67QY9kqYn8nvDrg5IGlnDiXmShoITS4scuFjSEVfc7/M8wPeDEy9WLD5G0s4kfS0iU/McyID/kjSrBHRSchTXFujZke1yvZOSuiQN+vzD1IH5wcPVNcLalSRoS04eHXX5CUm3Of+JYLcwOrA5hP68Gg7Yt/1VAOtw/gJJOwL/Z0lzg12r55bRx5kDk0PWP1Zj8WxcJ+ms2x2S9G1Y2JLuLUntOXaPuo7ZTjXGw86w7B9bY2HLgTskrZV0TP+nzyTdUGI/2vPM6HHrBfO9Jn0NjPKqNgZoA8Z5hbscuAKYBUwsqurArcCWiupvjWuH695kDlztgnnArxXGkX4CPgEuAu705jSzhgNGu9yBqyx7+4H2EuXjwH4f+4DdwJfAIZdPBnqB84EDwIwaXdB6ySbgWGvo6eu9hQ766AMOm1IF2ICHdLHfEcyZEUADuAA4DZxwrF+8KY112wbeKIw6m/gCbEyT9Ir3i3OlU62+A4vChBpnhyfms8BDJRea5X4cfT5v9+S247ne27bh9NtOtrj3b9bY9WJJvye77fYm9UjgrazAecP1ttvkBZ/0VhitCQVL7vicIG+zkLrsowqsrBq+ZJNbAuicHGX7UjYEnYFQetPxgeuYI40CndkBa0lWn38rOYaNweAbSZeV7Kwj6N5doLPJ5Yet72TMp5x5RtLMoPxkAPxU0qiK0DbChebVHPmMIH8mdsOGe5Ql1XDvbNmZ23mPqPl5drtNT8I3zK0uO5o1qqjQGXb7sqSD/rf9jm+iPjwdcKYE/vOB/2DGT43f03/pbEVnyxuLAsI9Ll8deO9GmxTgwuQOt7vmBSXFOOP2az2aGe10eaED+NnEW80ez4dmnPjObYcCjr0rxqW6RQCWcK8lx7Hd7/UTSxZu83dEb2L7etEVvup1vBRY58+0jMzgB+96R4C/gfHeCa/0p1pG1g9WAZsLV6gRTitUyz0CMaRFZDr2KT7gtqX4zf5/wDraIuAaf4BaRzOyS82PwB6/U9S7WQH/AgSZ/NkkcrmgAAAAAElFTkSuQmCC" alt="dribbble">
+              </a>
+              <a class="social__item social__item_light-blue" href="#">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAWCAYAAABOm/V6AAACJElEQVRIia2WvWtUQRTFf5EQP/AjRYpEgxBNo5WsYERIIxYWFgpKSBExpUiUdBFtbAURbPwfkkZBbLQIAcFvIYhCRA0oKCoSE8QkBo9cmZXxOm/3zW4OTPHm3rl73p17ztsWSYeojyVgHngDLJTIz4Py8EvSQ0mDklitZZ1Qg/yvAecKYvW6ezd+aIaEnTsA3C+I1UJLHGtNJO50zxuAXcAYUIlfADhRQOJJ3uv8j6K77pS04rJvrMZcrMng+xH45va+F+T2AleAF0FZi8BL4CrQ3UwneoM6Ygy7HJuxi5KWamhuTtJAfC5FYq9bfZJOSXrl8h5JanMkLpUUvF3r4VokysBmocMR2O86NS3poKR1ktZLOibpUxR/F/YbJvFM0hFH4lYUXwiD7K/0pKszVGRWKXm1Azucvu3cGeA6sBH4AqwNsSlgOFFnC/AY/griJnA0ZzAriblYlLRd0r4GO/ohV6JPgVG3Z29+HOjIqBOj07qScsxamE7EdocWx/gKvC1ZszWXxLZUkfCJj2Em1V+2aM51WMsvJ/bNCd8DM9HeHmBTQZ2uMOS2Nv/ZSQzLncQyY/qRyF2W1BMGd8TFJiS1Ozc1Wc9HOZVmfKKK89GPmHs+cHFTz3NJ94ISYtxu1jHNjM4mZLw1GFk9zErqrp6zFr0uMQ9mTHNhACeBCeBzQW4bcBoYSfw3sa/wOHAhPm8kSnBoGDaE5gXmJ1XZ/vynGvAb443ptEq1DvsAAAAASUVORK5CYII=" alt="behance">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- rption 1: Bootstrap Bundle with Popper -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script> -->
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+  <script src="Crafty.js"></script></body>
+</html>
