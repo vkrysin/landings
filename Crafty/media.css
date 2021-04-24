@@ -87,6 +87,9 @@
 }
 
 @media screen and (max-width: 768px) {
+  header {
+    padding-left: 30px;
+  }
   .carousel-item {
     margin-top: 50px;
   }
@@ -102,7 +105,7 @@
     padding: 0;
   }
   .about .header__img {
-    height: 160px;
+    height: 140px;
   }
   .projects {
     -ms-grid-rows: (250px)[4];

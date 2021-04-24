@@ -466,4 +466,204 @@ footer .social__item_maroon {
 footer .social__item_blue {
   background-color: #437fe2;
 }
-/*# sourceMappingURL=styles.css.map */
+
+@media screen and (max-width: 1400px) {
+  .header__description__second-line {
+    display: inline;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .carousel-item {
+    margin-top: 90px;
+  }
+  .carousel-slide__description {
+    margin-top: 25px;
+  }
+  .carousel__btn {
+    margin-top: 70px;
+  }
+  .carousel-indicators {
+    margin-left: 40%;
+    margin-bottom: 5rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .carousel-item {
+    margin-top: 100px;
+  }
+  .about .header__img {
+    height: 220px;
+  }
+  .advantages {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -ms-grid-rows: (auto)[4];
+        grid-template-rows: repeat(4, auto);
+  }
+  .advantages .item:nth-child(n + 1) {
+    margin-top: 40px;
+  }
+  .navbar .nav-item:first-child {
+    margin-left: 0;
+  }
+  .projects {
+    -ms-grid-columns: (minmax(200px, 340px))[2];
+        grid-template-columns: repeat(2, minmax(200px, 340px));
+    -ms-grid-rows: (300px)[4];
+        grid-template-rows: repeat(4, 300px);
+  }
+  .projects .item:nth-child(2) {
+    border-right: 1px solid #f02020;
+  }
+  .projects .item:nth-child(5) {
+    border-bottom: none;
+  }
+  .projects .item:nth-child(6) {
+    border-bottom: none;
+    border-right: 1px solid #f02020;
+  }
+  .contacts {
+    padding-top: 20px;
+  }
+  .contacts form {
+    margin-top: 50px;
+  }
+  .contacts form input, .contacts form textarea {
+    font-size: 15px;
+    letter-spacing: 0.16em;
+  }
+  .contacts form .btn {
+    width: 250px;
+    height: 70px;
+    font-size: 15px;
+    letter-spacing: 0.16em;
+  }
+  footer {
+    margin-top: 50px;
+  }
+  footer .description {
+    margin-top: 40px;
+    font-size: 15px;
+  }
+  footer .social {
+    margin-top: 40px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding-left: 30px;
+  }
+  .carousel-item {
+    margin-top: 50px;
+  }
+  .carousel-slide__description {
+    margin-top: 25px;
+  }
+  .carousel__btn {
+    margin-top: 50px;
+  }
+  .header__description,
+  .works .works__header,
+  .contacts .header__description {
+    padding: 0;
+  }
+  .about .header__img {
+    height: 140px;
+  }
+  .projects {
+    -ms-grid-rows: (250px)[4];
+        grid-template-rows: repeat(4, 250px);
+  }
+  .works {
+    padding-bottom: 80px;
+  }
+  .contacts form {
+    margin-top: 20px;
+  }
+  .contacts form .row:first-child {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contacts form input {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .logo {
+    padding-left: 15px;
+  }
+  .carousel-inner {
+    min-height: 560px;
+    padding-left: 15px;
+  }
+  .carousel-slide__header-text {
+    padding-right: 50px;
+  }
+  .header-text {
+    font-size: 25px;
+  }
+  .header__description {
+    font-size: 14px;
+  }
+  .carousel-indicators {
+    margin-left: 50%;
+  }
+  .about .header__img {
+    height: 120px;
+  }
+  .works .filter {
+    margin-top: 50px;
+  }
+  .projects {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -ms-grid-rows: (220px)[8];
+        grid-template-rows: repeat(8, 220px);
+  }
+  footer .col-12:first-child {
+    padding-left: 30px;
+  }
+  footer .social {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .carousel-indicators {
+    margin-left: -35%;
+  }
+  .about .header__img {
+    height: 100px;
+  }
+  .about .header__h2__text {
+    word-spacing: 0px;
+  }
+  .advantages .item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .advantages .item:nth-child(n + 1) {
+    margin-top: 5px;
+  }
+  .advantages .item__header {
+    margin-top: 10px;
+  }
+  .contacts form .btn {
+    width: 170px;
+    height: 50px;
+    font-size: 13px;
+    letter-spacing: 0.10em;
+  }
+}
+/*# sourceMappingURL=app.css.map */
