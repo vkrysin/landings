@@ -1,0 +1,59 @@
+
+// home styles
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap');
+@font-face {
+  font-family: 'San Francisco Pro Display Semibold';
+  src: url('fonts/SFProDisplay-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+header {
+  padding-bottom: 25px;
+  background-color: #fff;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0px 4px 2px #373a4270;
+  & h2 {
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 18px;
+    color: #373A42;
+  }
+  & .info-bar {
+  margin-top: 18px;
+  display: flex;
+  justify-content: space-between;
+
+    & .info-bat__time {
+      margin-left: 32px;
+      font-family: 'San Francisco Pro Display Semibold';
+      font-size: 15px;
+    }
+
+    & .info-bar__status {
+      margin-right: 16px;
+      display: flex;
+
+      & > * {
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+section[class=personal-recommendations] {
+  margin-top: 20px;
+
+  & .personal-recommendations__header {
+    margin: 0 16px;
+    display: flex;
+    justify-content: space-between;
+
+    & h2 {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 25px;
+      font-weight: 700;
+      color: #373A42;
+    }
+  }
+}
