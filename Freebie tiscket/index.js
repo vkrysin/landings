@@ -1,33 +1,14 @@
-let sliderImgs = [];
-let currentSliderIndex = 0;
+import Slider from './logic/slider.js'
 
-document.addEventListener('DOMContentLoaded', () => {
-  sliderImgs = document.querySelectorAll('.slider__item');
-  for(let sliderItem of sliderImgs) {
-    sliderItem.style.opacity = 0;
-  }
-  sliderImgs[0].style.opacity = 1;
-})
+let collectionsSliderItems = document.querySelectorAll('.collections .slider__item');
+let collectionsLeftArrow = document.querySelector('.collections .left-arrow');
+let collectionsRightArrow = document.querySelector('.collections .right-arrow');
 
-function showPrevious() {
-  sliderImgs[currentSliderIndex].style.opacity = 0;
-  if(currentSliderIndex != 0) {
-    currentSliderIndex--;
-    sliderImgs[currentSliderIndex ].style.opacity = 1;
-  }
-  else {
-    currentSliderIndex = sliderImgs.length - 1;
-    sliderImgs[currentSliderIndex].style.opacity = 1;
-  }
-}
-function showNext() {
-  sliderImgs[currentSliderIndex].style.opacity = 0;
-  if(currentSliderIndex != sliderImgs.length - 1) {
-    currentSliderIndex++;
-    sliderImgs[currentSliderIndex].style.opacity = 1;
-  }
-  else {
-    currentSliderIndex = 0;
-    sliderImgs[currentSliderIndex].style.opacity = 1;
-  }
-}
+new Slider(collectionsSliderItems, collectionsLeftArrow, collectionsRightArrow);
+
+let personalSliderItems = document.querySelectorAll('.personal-recommendations .slider__item');
+let personalLeftArrow = document.querySelector('.personal-recommendations .left-arrow');
+let personalRightArrow = document.querySelector('.personal-recommendations .right-arrow');
+
+new Slider(personalSliderItems, personalLeftArrow, personalRightArrow);
+
