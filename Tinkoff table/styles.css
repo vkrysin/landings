@@ -1,0 +1,104 @@
+@font-face {
+  font-family: "HarmoniaSansProCyr Regular";
+  src: url("fonts/HarmoniaSansProCyr-Regular.otf");
+}
+* {
+  box-sizing: border-box;
+}
+
+header {
+  margin: 40px 40px 0 40px;
+  display: flex;
+}
+header input {
+  height: 40px;
+  width: 240px;
+  font-family: "HarmoniaSansProCyr Regular", serif;
+  font-size: 16px;
+  color: #11223E;
+  line-height: 11px;
+  text-indent: 16px;
+  border: 1px solid #223E691A;
+  border-radius: 5px;
+}
+header .switch-device {
+  margin-left: 40px;
+  height: 40px;
+  width: 210px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .switch-device .switch-device__iphone {
+  padding: 15px;
+  text-decoration: none;
+  font-family: "HarmoniaSansProCyr Regular", serif;
+  font-size: 14px;
+  color: #11223E;
+  opacity: 0.5;
+  line-height: 9px;
+  border: 1px solid rgba(34, 62, 105, 0.2);
+  border-radius: 5px 0 0 5px;
+}
+header .switch-device .switch-device__ipad {
+  padding: 15px 38px;
+  text-decoration: none;
+  font-family: "HarmoniaSansProCyr Regular", serif;
+  font-size: 14px;
+  color: #11223E;
+  opacity: 0.5;
+  line-height: 9px;
+  border: 1px solid rgba(34, 62, 105, 0.2);
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+}
+header .switch-device .opacity_1 {
+  opacity: 1;
+}
+header .switch-device > * {
+  width: 105px;
+}
+header .download-csv {
+  margin-left: 200px;
+  height: 40px;
+  width: 142px;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(34, 62, 105, 0.2);
+  border-radius: 5px;
+}
+header .download-csv:hover {
+  background: #eed2d2;
+}
+header .download-csv:active {
+  background: #eed2d2c5;
+}
+header .download-csv > a {
+  padding: 15px 20px;
+  text-decoration: none;
+  font-family: "HarmoniaSansProCyr Regular", serif;
+  font-size: 16px;
+  color: #11223E;
+  line-height: 11px;
+}
+header .addRequestBtn {
+  margin-left: 20px;
+  height: 40px;
+  width: 170px;
+  font-family: "HarmoniaSansProCyr", serif;
+  font-size: 16px;
+  line-height: 11px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  background: #FC3969;
+  box-shadow: 0px 3px 7px 0px #FC39694D;
+}
+header .addRequestBtn:hover {
+  background: #fc396aec;
+}
+header .addRequestBtn:active {
+  background: linear-gradient(#e66465, #f76b79);
+}
+
+/*# sourceMappingURL=styles.css.map */
