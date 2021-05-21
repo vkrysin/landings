@@ -111,4 +111,64 @@ header {
   }
 }
 
+// banner styles
+
+.banner {
+  margin: 30px auto 0;
+  height: 40px;
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(248, 231, 28, 0.15);
+
+  & .banner__stats {
+    width: 81px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    font-family: 'HarmoniaSansProCyr Regular', serif;
+    font-size: 12px;
+    line-height: 8px;
+    color: #11223E;
+
+    & div:first-child {
+      padding-top: 4px;
+      padding-left: 6px;
+      height: 18px;
+      width: 39px;
+      border-radius: 5px 0 0 5px;
+      background: #F8E71C;
+    }
+    & div:last-child {
+      padding-top: 4px;
+      padding-left: 2px;
+      height: 18px;
+      width: 42px;
+      border-radius: 0 5px 5px 0;
+      background: #fff;
+    }
+  }
+
+  & .banner__message {
+    margin-left: 20px;
+    display: flex;
+
+    & img {
+      height: 14px;
+    }
+
+    & .banner__message__text {
+      margin-left: 10px;
+      padding-top: 1px;
+      width: 260px;
+
+      font-family: 'HarmoniaSansProCyr Regular', serif;
+      font-size: 14px;
+      line-height: 9px;
+      color: rgba(17, 34, 62, 0.5);
+    }
+  }
+}
+
 // table styles

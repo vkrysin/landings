@@ -101,4 +101,56 @@ header .addRequestBtn:active {
   background: linear-gradient(#e66465, #f76b79);
 }
 
+.banner {
+  margin: 30px auto 0;
+  height: 40px;
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(248, 231, 28, 0.15);
+}
+.banner .banner__stats {
+  width: 81px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  font-family: "HarmoniaSansProCyr Regular", serif;
+  font-size: 12px;
+  line-height: 8px;
+  color: #11223E;
+}
+.banner .banner__stats div:first-child {
+  padding-top: 4px;
+  padding-left: 6px;
+  height: 18px;
+  width: 39px;
+  border-radius: 5px 0 0 5px;
+  background: #F8E71C;
+}
+.banner .banner__stats div:last-child {
+  padding-top: 4px;
+  padding-left: 2px;
+  height: 18px;
+  width: 42px;
+  border-radius: 0 5px 5px 0;
+  background: #fff;
+}
+.banner .banner__message {
+  margin-left: 20px;
+  display: flex;
+}
+.banner .banner__message img {
+  height: 14px;
+}
+.banner .banner__message .banner__message__text {
+  margin-left: 10px;
+  padding-top: 1px;
+  width: 260px;
+  font-family: "HarmoniaSansProCyr Regular", serif;
+  font-size: 14px;
+  line-height: 9px;
+  color: rgba(17, 34, 62, 0.5);
+}
+
 /*# sourceMappingURL=styles.css.map */
