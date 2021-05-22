@@ -153,4 +153,87 @@ header .addRequestBtn:active {
   color: rgba(17, 34, 62, 0.5);
 }
 
+table {
+  margin-top: 30px;
+  margin-left: 40px;
+  border-collapse: collapse;
+}
+table td, table th {
+  height: 50px;
+  width: 44px;
+  border: 1px solid rgba(17, 34, 62, 0.2);
+}
+table thead {
+  font-family: "HarmoniaSansProCyr Regular", serif;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 15px;
+  color: rgba(17, 34, 62, 0.3);
+}
+table thead th:nth-child(1) {
+  width: 283px;
+  text-align: left;
+}
+table thead th:nth-child(1) input[type=checkbox] {
+  margin-left: 14px;
+  height: 20px;
+  width: 20px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -o-appearance: none;
+  border-radius: 5px;
+  background: rgba(34, 62, 105, 0.2);
+}
+table thead th:nth-child(1) input[type=checkbox]:hover {
+  background: rgba(34, 62, 105, 0.17);
+}
+table thead th:nth-child(1) button {
+  padding: 0;
+  padding-top: 5px;
+  border: none;
+  background: none;
+}
+table thead th:nth-child(1) .delete {
+  margin-left: 20px;
+}
+table thead th:nth-child(1) .reload, table thead th:nth-child(1) .rocket {
+  margin-left: 15px;
+}
+table thead th:nth-child(2) {
+  position: relative;
+  width: 90px;
+}
+table thead th:nth-child(2) .text {
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-weight: normal;
+}
+table thead th:nth-child(2) input[type=image] {
+  position: absolute;
+  top: 25px;
+  left: 67px;
+}
+table thead td {
+  vertical-align: 0;
+}
+table thead td .date {
+  margin-top: 14px;
+  padding-left: 6px;
+}
+table thead td .green-rectangle {
+  margin-top: 5px;
+  margin-left: 10px;
+  height: 11px;
+  width: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: #355B08;
+  border-radius: 3px;
+  background: rgba(117, 185, 38, 0.3);
+}
+
 /*# sourceMappingURL=styles.css.map */
