@@ -348,7 +348,7 @@ table tbody input[type=checkbox] {
   background: rgba(34, 62, 105, 0.2);
 }
 table tbody input[type=checkbox]:hover {
-  background: rgba(34, 62, 105, 0.17);
+  background: rgba(34, 62, 105, 0.9);
 }
 
 /*# sourceMappingURL=styles.css.map */
