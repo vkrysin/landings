@@ -172,6 +172,11 @@ header {
 
 // table styles
 
+.container {
+  margin: 0 100px;
+  position: relative;
+}
+
 .table-container {
   // margin-top: 1px;
   width: 523px;
@@ -212,6 +217,12 @@ table {
     vertical-align: 0;
     border: 1px solid rgba(17, 34, 62, 0.2);
   }
+  & .bg-color-light-green {
+    background: #FAFFEE;
+  }
+  & .bg-color-light-red {
+    background: #FFF6F6;
+  }
 
   & tbody {
     font-family: 'HarmoniaSansProCyr Regular', serif;
@@ -239,9 +250,24 @@ table {
         top: 4px;
         left: 27px;
         display: flex;
-        color: #D0021B;
+
+        & .rating__number_red {
+          color: #D0021B;
+        }
+        & .rating__number_green {
+          color: #417505;
+        }
+      }
+
+      & .rating-text {
+        left: 22px;
+        font-family: 'HarmoniaSansProCyr Regular', serif;
+        font-size: 10px;
+        line-height: 7px;
+        color: #417505;
 ;
       }
+
       & .value {
         margin-top: 16px;
         color: #11223E;
@@ -263,7 +289,6 @@ table {
         margin-top: 12px;
       }
     }
-
     & .table-manage-panel {
       margin-top: 15px;
       margin-left: 14px;
@@ -327,15 +352,17 @@ table {
 
       & .arrow {
         margin-left: 9px;
-        width: 5px;
-        height: 9px;
+      }
+      & .no-star {
+        margin-left: 56px;
       }
     }
     & .th-content_bank {
-      & .arrow {
+      & .arrow-bottom {
         margin-left: 102px;
-        width: 5px;
-        height: 9px;
+      }
+      & .arrow-right {
+        margin-left: 106px;
       }
     }
     & .total-mark-value {

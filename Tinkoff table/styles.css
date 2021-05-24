@@ -153,6 +153,11 @@ header .addRequestBtn:active {
   color: rgba(17, 34, 62, 0.5);
 }
 
+.container {
+  margin: 0 100px;
+  position: relative;
+}
+
 .table-container {
   width: 523px;
   overflow-x: auto;
@@ -190,6 +195,12 @@ table td, table th {
   vertical-align: 0;
   border: 1px solid rgba(17, 34, 62, 0.2);
 }
+table .bg-color-light-green {
+  background: #FAFFEE;
+}
+table .bg-color-light-red {
+  background: #FFF6F6;
+}
 table tbody {
   font-family: "HarmoniaSansProCyr Regular", serif;
   font-size: 12px;
@@ -212,7 +223,19 @@ table tbody .td-content .rating {
   top: 4px;
   left: 27px;
   display: flex;
+}
+table tbody .td-content .rating .rating__number_red {
   color: #D0021B;
+}
+table tbody .td-content .rating .rating__number_green {
+  color: #417505;
+}
+table tbody .td-content .rating-text {
+  left: 22px;
+  font-family: "HarmoniaSansProCyr Regular", serif;
+  font-size: 10px;
+  line-height: 7px;
+  color: #417505;
 }
 table tbody .td-content .value {
   margin-top: 16px;
@@ -286,13 +309,15 @@ table tbody .th-content .star {
 }
 table tbody .th-content .arrow {
   margin-left: 9px;
-  width: 5px;
-  height: 9px;
 }
-table tbody .th-content_bank .arrow {
+table tbody .th-content .no-star {
+  margin-left: 56px;
+}
+table tbody .th-content_bank .arrow-bottom {
   margin-left: 102px;
-  width: 5px;
-  height: 9px;
+}
+table tbody .th-content_bank .arrow-right {
+  margin-left: 106px;
 }
 table tbody .total-mark-value {
   margin-top: 18px;
