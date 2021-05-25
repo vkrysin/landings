@@ -8,8 +8,13 @@
 // header styles
 
 header {
-  margin: 40px 40px 0 40px;
-  display: flex;
+  margin-top: 40px;
+
+  & .header-container {
+    margin: 0 auto;
+    display: flex;
+    width: max-content;
+  }
 
   & input {
     height: 40px;
@@ -173,13 +178,15 @@ header {
 // table styles
 
 .container {
-  margin: 0 100px;
   position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: max-content;
 }
 
 .table-container {
   // margin-top: 1px;
-  width: 523px;
+  max-width: 523px;
   overflow-x: auto;
   margin-left: 413px;
   margin-top: 30px;
@@ -265,7 +272,6 @@ table {
         font-size: 10px;
         line-height: 7px;
         color: #417505;
-;
       }
 
       & .value {
@@ -362,7 +368,7 @@ table {
         margin-left: 102px;
       }
       & .arrow-right {
-        margin-left: 106px;
+        margin-left: 105px;
       }
     }
     & .total-mark-value {
@@ -404,3 +410,4 @@ table {
     }
   }
 }
+@import 'media';

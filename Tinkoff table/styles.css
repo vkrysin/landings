@@ -7,8 +7,12 @@
 }
 
 header {
-  margin: 40px 40px 0 40px;
+  margin-top: 40px;
+}
+header .header-container {
+  margin: 0 auto;
   display: flex;
+  width: max-content;
 }
 header input {
   height: 40px;
@@ -154,12 +158,14 @@ header .addRequestBtn:active {
 }
 
 .container {
-  margin: 0 100px;
   position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: max-content;
 }
 
 .table-container {
-  width: 523px;
+  max-width: 523px;
   overflow-x: auto;
   margin-left: 413px;
   margin-top: 30px;
@@ -317,7 +323,7 @@ table tbody .th-content_bank .arrow-bottom {
   margin-left: 102px;
 }
 table tbody .th-content_bank .arrow-right {
-  margin-left: 106px;
+  margin-left: 105px;
 }
 table tbody .total-mark-value {
   margin-top: 18px;
@@ -349,6 +355,82 @@ table tbody input[type=checkbox] {
 }
 table tbody input[type=checkbox]:hover {
   background: rgba(34, 62, 105, 0.9);
+}
+
+@media screen and (max-width: 1050px) {
+  header .download-csv {
+    margin-left: 100px;
+  }
+}
+@media screen and (max-width: 960px) {
+  header .header-container {
+    margin-left: 35px;
+    flex-wrap: wrap;
+    width: 655px;
+  }
+  header .download-csv {
+    display: none;
+  }
+  header .addRequestBtn {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 426px) {
+  header {
+    margin-top: 20px;
+  }
+  header .header-container {
+    flex-direction: column;
+  }
+  header .header-container .search, header .header-container .switch-device {
+    margin-left: 0;
+  }
+  header .header-container .search, header .header-container .addRequestBtn, header .header-container .switch-device {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .banner {
+    width: 900px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .banner {
+    margin-left: 35px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .banner {
+    width: 425px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .container {
+    margin-left: 35px;
+  }
+  .container .table-container {
+    margin-left: 373px;
+    max-width: 443px;
+  }
+  .container .table-container tr th:nth-child(1) {
+    left: 0;
+  }
+  .container .table-container tr th:nth-child(2) {
+    left: 283px;
+  }
+}
+@media screen and (max-width: 760px) {
+  .container .table-container {
+    max-width: 273px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .container .table-container {
+    max-width: 243px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
