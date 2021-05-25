@@ -9,10 +9,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "normalize.css": "^8.0.1"
+    "css-loader": "^5.2.6",
+    "normalize.css": "^8.0.1",
+    "sass-loader": "^11.1.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.37.1"
   },
   "devDependencies": {
     "eslint": "^7.26.0",
-    "eslint-config-google": "^0.14.0"
+    "eslint-config-google": "^0.14.0",
+    "html-loader": "^2.1.2"
   }
 }

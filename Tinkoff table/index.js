@@ -1,3 +1,5 @@
+import './styles.scss';
+
 const stars = document.querySelectorAll('.star');
 
 console.log(stars);
