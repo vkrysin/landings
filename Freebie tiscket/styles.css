@@ -87,4 +87,26 @@ section[class=personal-recommendations] .personal-recommendations__header h2 {
   height: 308px;
 }
 
+.dropdown {
+  display: flex;
+}
+.dropdown .drop-btn {
+  display: none;
+}
+.dropdown .dropdown-content {
+  display: flex;
+}
+.dropdown .item, .dropdown .drop-btn {
+  margin-left: 10px;
+  background-color: rgba(19, 156, 6, 0.699);
+}
+@media screen and (max-width: 425px) {
+  .dropdown .dropdown-content {
+    display: none;
+  }
+  .dropdown .drop-btn {
+    display: block;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */

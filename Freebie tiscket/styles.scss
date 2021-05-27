@@ -98,3 +98,28 @@ section[class=personal-recommendations] {
 
   }
 }
+.dropdown {
+
+  display: flex;
+
+  & .drop-btn {
+    display: none;
+  }
+  & .dropdown-content {
+    display: flex;
+  }
+  & .item, .drop-btn {
+    margin-left: 10px;
+    background-color: rgba(19, 156, 6, 0.699);
+  }
+
+  @media screen and (max-width: 425px) {
+    & .dropdown-content {
+      display: none;
+    }
+    & .drop-btn {
+      display: block;
+    }
+
+  }
+}

@@ -12,3 +12,9 @@ let personalRightArrow = document.querySelector('.personal-recommendations .righ
 
 new Slider(personalSliderItems, personalLeftArrow, personalRightArrow);
 
+let btn = document.querySelector('.drop-btn');
+
+btn.addEventListener('click', () => {
+  console.log(1000000000000000);
+  document.querySelector('.dropdown-content').style.display = 'block';
+})
