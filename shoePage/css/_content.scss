@@ -1,0 +1,38 @@
+@import './mixins';
+
+.content {
+  display: flex;
+  & .left {
+    @include connectFont('Montserrat', 400, 22px, #3A3A3A);
+    margin-top: 105px;
+    margin-left: 48px;
+    display: flex;
+    flex-direction: column;
+
+    & .item {
+      margin-top: 60px;
+      display: flex;
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+
+      & .item__relevant {
+        @include connectFont('Montserrat', 400, 12px, #fff);
+        margin-left: 12px;
+        width: 41px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 40px;
+      }
+    }
+  }
+  & .product {
+    .product__intro {
+      @include connectFont('Montserrat', 400, 21px, rgba(0, 0 ,0, 0.4));
+    }
+  }
+}

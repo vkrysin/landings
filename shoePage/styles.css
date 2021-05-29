@@ -1,22 +1,32 @@
 @font-face {
-  font-family: "Montserrat-Thin";
+  font-family: "Montserrat";
   src: url("../fonts/Montserrat-Thin.ttf");
+  font-weight: 100;
 }
 @font-face {
-  font-family: "Montserrat-Light";
+  font-family: "Montserrat";
   src: url("../fonts/Montserrat-Light.ttf");
+  font-weight: 300;
 }
 @font-face {
-  font-family: "Montserrat-Medium";
+  font-family: "Montserrat";
   src: url("../fonts/Montserrat-Medium.ttf");
+  font-weight: 500;
 }
 @font-face {
-  font-family: "Montserrat-SemiBold";
+  font-family: "Montserrat";
   src: url("../fonts/Montserrat-SemiBold.ttf");
+  font-weight: 500;
 }
 @font-face {
-  font-family: "Montserrat-Bold";
+  font-family: "Montserrat";
   src: url("../fonts/Montserrat-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Regular.ttf");
+  font-weight: 400;
 }
 header {
   display: flex;
@@ -33,6 +43,47 @@ header .manage-panel {
 }
 header .manage-panel input {
   margin-left: 30px;
+}
+
+.content {
+  display: flex;
+}
+.content .left {
+  font-family: "Montserrat", serif;
+  font-weight: 400;
+  font-size: 22px;
+  color: #3A3A3A;
+  margin-top: 105px;
+  margin-left: 48px;
+  display: flex;
+  flex-direction: column;
+}
+.content .left .item {
+  margin-top: 60px;
+  display: flex;
+}
+.content .left .item:first-of-type {
+  margin-top: 0;
+}
+.content .left .item .item__relevant {
+  font-family: "Montserrat", serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #fff;
+  margin-left: 12px;
+  width: 41px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 40px;
+}
+.content .product .product__intro {
+  font-family: "Montserrat", serif;
+  font-weight: 400;
+  font-size: 21px;
+  color: rgba(0, 0, 0, 0.4);
 }
 
 /*# sourceMappingURL=styles.css.map */
