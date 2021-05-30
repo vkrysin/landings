@@ -2,17 +2,17 @@ header {
   display: flex;
   justify-content: space-between;
 
-  & .logo {
+  .logo {
     margin-top: 40px;
     margin-left: 50px;
   }
 
-  & .manage-panel {
+  .manage-panel {
     margin-top: 56px;
     margin-right: 43px;
     display: flex;
 
-    & input {
+    input {
       margin-left: 30px;
     }
   }
