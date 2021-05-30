@@ -10,27 +10,28 @@
 }
 @font-face {
   font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Montserrat";
   src: url("../fonts/Montserrat-Medium.ttf");
   font-weight: 500;
 }
 @font-face {
   font-family: "Montserrat";
   src: url("../fonts/Montserrat-SemiBold.ttf");
-  font-weight: 500;
+  font-weight: 600;
 }
 @font-face {
   font-family: "Montserrat";
   src: url("../fonts/Montserrat-Bold.ttf");
   font-weight: 700;
 }
-@font-face {
-  font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Regular.ttf");
-  font-weight: 400;
-}
 header {
   display: flex;
   justify-content: space-between;
+  max-width: 1470px;
 }
 header .logo {
   margin-top: 40px;
@@ -49,18 +50,21 @@ header .manage-panel input {
   display: flex;
 }
 .content .left {
-  font-family: "Montserrat", serif;
-  font-weight: 400;
-  font-size: 22px;
-  color: #3A3A3A;
   margin-top: 105px;
   margin-left: 48px;
   display: flex;
   flex-direction: column;
+  font-family: "Montserrat", serif;
+  font-weight: 400;
+  font-size: 22px;
+  color: #3A3A3A;
 }
 .content .left .item {
   margin-top: 60px;
   display: flex;
+}
+.content .left .item:hover {
+  cursor: pointer;
 }
 .content .left .item:first-of-type {
   margin-top: 0;
@@ -79,11 +83,237 @@ header .manage-panel input {
   background: rgba(0, 0, 0, 0.2);
   border-radius: 40px;
 }
+.content .left .dropdown {
+  flex-direction: column;
+}
+.content .left .dropdown .item__menu {
+  display: none;
+}
+.content .left .dropdown .item {
+  margin-top: 40px;
+  margin-left: 0;
+  display: flex;
+}
+.content .left .item__menu {
+  display: none;
+  cursor: pointer;
+}
+.content .left .slogan {
+  margin-top: 165px;
+  width: 195px;
+  display: flex;
+  font-family: "Montserrat", serif;
+  font-weight: 400;
+  font-size: 44px;
+  color: #000;
+}
+.content .left .slogan span:first-of-type {
+  background-color: #000;
+  color: #fff;
+}
+.content .left .slogan span:last-of-type {
+  font-weight: 300;
+}
+.content .product {
+  margin-top: 95px;
+  margin-left: 85px;
+  width: 1060px;
+  min-height: 820px;
+  background: url("./../img/content/shoe.svg") 83px no-repeat;
+}
 .content .product .product__intro {
+  margin-top: 70px;
   font-family: "Montserrat", serif;
   font-weight: 400;
   font-size: 21px;
   color: rgba(0, 0, 0, 0.4);
+}
+.content .product .product__header {
+  font-family: "Montserrat", serif;
+  font-weight: 300;
+  font-size: 62px;
+  color: #000000;
+}
+.content .product .product__description {
+  max-width: 565px;
+  line-height: 32px;
+  font-family: "Montserrat", serif;
+  font-weight: 400;
+  font-size: 21px;
+  color: rgba(0, 0, 0, 0.4);
+}
+.content .product .product__img {
+  display: none;
+}
+.content .product .buttons-panel {
+  margin-top: 50px;
+  max-width: 395px;
+  display: flex;
+  justify-content: space-between;
+}
+.content .product .buttons-panel .buttons-panel__add-btn {
+  background: #030304;
+}
+.content .product .buttons-panel .buttons-panel__add-btn:hover {
+  background: #030304e7;
+  cursor: pointer;
+}
+.content .product .buttons-panel .buttons-panel__add-btn img {
+  margin-left: 35px;
+}
+.content .product .buttons-panel .buttons-panel__add-btn span {
+  margin-left: 12px;
+  font-family: "Montserrat", serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #fff;
+}
+.content .product .buttons-panel .buttons-panel__watch-btn:hover {
+  background: #0303040e;
+  cursor: pointer;
+}
+.content .product .buttons-panel .buttons-panel__watch-btn img {
+  margin-left: 35px;
+}
+.content .product .buttons-panel .buttons-panel__watch-btn span {
+  margin-left: 12px;
+  font-family: "Montserrat", serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: #030304;
+}
+.content .right {
+  margin-top: 115px;
+  max-width: 77px;
+}
+.content .right .production,
+.content .right .social {
+  margin-top: 150px;
+  display: flex;
+  transform: rotate(270deg);
+}
+.content .right .production .item,
+.content .right .social .item {
+  margin-left: 32px;
+}
+.content .right .production .item:first-of-type,
+.content .right .social .item:first-of-type {
+  margin-left: 0;
+}
+.content .right .social {
+  margin-top: 300px;
+}
+
+.btn {
+  width: 185px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #808080;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 1500px) {
+  .content .product {
+    width: 75.3846153846vw;
+    background-size: 60vw 60vw;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .content .product {
+    width: 67.6923076923vw;
+    background: none;
+  }
+  .content .product .product__img {
+    display: block;
+    height: 500px;
+  }
+  .content .product .product__img img {
+    width: 600px;
+    height: 500px;
+  }
+}
+@media screen and (max-width: 1025px) {
+  .content .product {
+    width: 60vw;
+    background: none;
+  }
+  .content .product .product__img {
+    display: block;
+    height: 400px;
+  }
+  .content .product .product__img img {
+    width: 500px;
+    height: 400px;
+  }
+}
+@media screen and (max-width: 910px) {
+  .content {
+    flex-direction: column;
+  }
+  .content .left nav {
+    display: flex;
+  }
+  .content .left .item {
+    margin-top: 0;
+    margin-left: 50px;
+  }
+  .content .left .slogan {
+    display: none;
+  }
+  .content .product {
+    margin-top: 0;
+    width: 60vw;
+    background: none;
+  }
+  .content .product .product__img {
+    display: block;
+    height: 400px;
+  }
+  .content .product .product__img img {
+    width: 500px;
+    height: 400px;
+  }
+  .content .right {
+    display: none;
+  }
+}
+@media screen and (max-width: 700px) {
+  .content .left {
+    margin-top: 50px;
+  }
+  .content .left .item__menu {
+    display: block;
+  }
+  .content .left .item {
+    display: none;
+  }
+  .content .product {
+    width: 75.3846153846vw;
+    background-size: 60vw 60vw;
+  }
+}
+@media screen and (max-width: 560px) {
+  .content .product {
+    margin-left: 50px;
+  }
+  .content .product .product__header {
+    margin-top: 20px;
+  }
+  .content .product .product__img {
+    display: block;
+    height: 300px;
+  }
+  .content .product .product__img img {
+    width: 300px;
+    height: 300px;
+  }
+  .content .product .buttons-panel {
+    flex-direction: column;
+  }
+  .content .product .buttons-panel .buttons-panel__watch-btn {
+    margin-top: 10px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
