@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap");
+@font-face {
+  font-family: "San Francisco Pro Display Semibold";
+  src: url("fonts/SFProDisplay-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+header {
+  padding-bottom: 25px;
+  background-color: #fff;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0px 4px 2px #373a4270;
+}
+header h2 {
+  text-align: center;
+  font-family: "Work Sans", sans-serif;
+  font-size: 18px;
+  color: #373A42;
+}
+header .info-bar {
+  margin-top: 18px;
+  display: flex;
+  justify-content: space-between;
+}
+header .info-bar .info-bat__time {
+  margin-left: 32px;
+  font-family: "San Francisco Pro Display Semibold";
+  font-size: 15px;
+}
+header .info-bar .info-bar__status {
+  margin-right: 16px;
+  display: flex;
+}
+header .info-bar .info-bar__status > * {
+  margin-left: 5px;
+}
+
+section[class=personal-recommendations] {
+  margin-top: 20px;
+}
+section[class=personal-recommendations] .personal-recommendations__header {
+  margin: 0 16px;
+  display: flex;
+  justify-content: space-between;
+}
+section[class=personal-recommendations] .personal-recommendations__header h2 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  color: #373A42;
+}
+
+.slider {
+  position: relative;
+  height: 250px;
+  display: flex;
+}
+.slider .slider__arrows {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  top: 50%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.slider .slider__arrows img {
+  height: 30px;
+  width: 25px;
+}
+.slider .slider__arrows img:hover {
+  background: rgba(248, 244, 221, 0.63);
+}
+.slider .slider__arrows img:active {
+  background: rgba(248, 244, 221, 0.336);
+}
+.slider .slider__item {
+  position: absolute;
+  left: 50%;
+  margin-left: -184px;
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+.slider .slider__item img {
+  width: 370px;
+  height: 308px;
+}
+
+.dropdown {
+  display: flex;
+}
+.dropdown .drop-btn {
+  display: none;
+}
+.dropdown .dropdown-content {
+  display: flex;
+}
+.dropdown .item, .dropdown .drop-btn {
+  margin-left: 10px;
+  background-color: rgba(19, 156, 6, 0.699);
+}
+@media screen and (max-width: 425px) {
+  .dropdown .dropdown-content {
+    display: none;
+  }
+  .dropdown .drop-btn {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

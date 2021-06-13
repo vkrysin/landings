@@ -1,0 +1,16 @@
+@import 'css/normalize.css';
+
+@font-face {
+  font-family: 'HarmoniaSansProCyr Regular';
+  src: url('fonts/HarmoniaSansProCyr-Regular.otf');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@import 'css/header';
+@import 'css/banner';
+@import 'css/table';
+
+@import 'css/media';

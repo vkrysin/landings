@@ -1,0 +1,167 @@
+@import './mixins';
+
+.content {
+  display: flex;
+
+  .left {
+    margin-top: 105px;
+    margin-left: 48px;
+    display: flex;
+    flex-direction: column;
+    @include connectFont('Montserrat', 400, 22px, #3A3A3A);
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .item {
+      margin-top: 60px;
+      display: flex;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      & a:first-of-type {
+        margin-top: 0;
+      }
+
+      .item__relevant {
+        @include connectFont('Montserrat', 400, 12px, #fff);
+        margin-left: 12px;
+        width: 41px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 40px;
+      }
+    }
+
+    .dropdown {
+      flex-direction: column;
+
+      .item__menu {
+        display: none;
+      }
+
+      .item {
+        margin-top: 40px;
+        margin-left: 0;
+        display: flex;
+      }
+    }
+
+    .item__menu {
+      display: none;
+      cursor: pointer;
+    }
+
+    .slogan {
+      margin-top: 165px;
+      width: 195px;
+      display: flex;
+      @include connectFont('Montserrat', 400, 44px, #000);
+
+      span:first-of-type {
+        background-color: #000;
+        color: #fff;
+      }
+      span:last-of-type {
+        font-weight: 300;
+      }
+    }
+  }
+  .product {
+    margin-top: 95px;
+    margin-left: 85px;
+    width: 1060px;
+    min-height: 820px;
+    background: url('./../img/content/shoe.svg') 83px no-repeat;
+
+    .product__intro {
+      margin-top: 70px;
+      @include connectFont('Montserrat', 400, 21px, rgba(0, 0 ,0, 0.4));
+    }
+
+    .product__header {
+      @include connectFont('Montserrat', 300, 62px, #000000);
+    }
+
+    .product__description {
+      max-width: 565px;
+      line-height: 32px;
+      @include connectFont('Montserrat', 400, 21px, rgba(0, 0 ,0, 0.4));
+    }
+
+    .product__img {
+      display: none;
+    }
+
+    .buttons-panel {
+      margin-top: 50px;
+      max-width: 395px;
+      display: flex;
+      justify-content: space-between;
+
+      .buttons-panel__add-btn {
+        background: #030304;
+
+        &:hover {
+          background: #030304e7;
+          cursor: pointer;
+        }
+
+        img {
+          margin-left: 35px;
+        }
+
+        span {
+          margin-left: 12px;
+          @include connectFont('Montserrat', 500, 15px, #fff);
+        }
+      }
+
+      .buttons-panel__watch-btn {
+        &:hover {
+          background: #0303040e;
+          cursor: pointer;
+        }
+
+        img {
+          margin-left: 35px;
+        }
+
+        span {
+          margin-left: 12px;
+            @include connectFont('Montserrat', 400, 15px, #030304);
+        }
+      }
+    }
+  }
+  .right {
+    margin-top: 115px;
+    max-width: 77px;
+
+    .production,
+    .social {
+      margin-top: 150px;
+      display: flex;
+      transform: rotate(270deg);
+
+      .item {
+        margin-left: 32px;
+
+        &:first-of-type {
+          margin-left: 0;
+        }
+      }
+    }
+
+    .social {
+      margin-top: 300px;
+    }
+  }
+}

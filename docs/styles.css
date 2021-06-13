@@ -1,0 +1,11 @@
+header h1 {
+  font-size: 40px;
+  font-family: serif;
+  color: rgb(235, 83, 83);
+}
+a {
+  font-size: 25px;
+}
+li {
+  margin-top: 10px;
+}

@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tinkoff table</title>
+<script defer src="index.js"></script></head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="search">
+        <input type="text" placeholder="Поиск по запросу">
+      </div>
+      <div class="switch-device">
+        <a href="#" class="switch-device__iphone opacity_1">iPhone/iPod</a>
+        <a href="#" class="switch-device__ipad">iPad</a>
+      </div>
+      <div class="download-csv">
+        <a href="#">Скачать .CSV</a>
+      </div>
+      <button class="addRequestBtn">Добавить запрос</button>
+    </div>
+  </header>
+  <div class="banner">
+    <div class="banner__stats">
+      <div>45% в</div>
+      <div>ТОП-3</div>
+    </div>
+    <div class="banner__message">
+      <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgb3BhY2l0eT0iMC41Ij4KPHBhdGggZD0iTTEzLjUgN0MxMy41IDEwLjU4OTkgMTAuNTg5OSAxMy41IDcgMTMuNUMzLjQxMDE1IDEzLjUgMC41IDEwLjU4OTkgMC41IDdDMC41IDMuNDEwMTUgMy40MTAxNSAwLjUgNyAwLjVDMTAuNTg5OSAwLjUgMTMuNSAzLjQxMDE1IDEzLjUgN1oiIHN0cm9rZT0iIzExMjIzRSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTcuNSAzSDYuNVY4SDcuNVYzWk03LjUgMTBINi41VjExSDcuNVYxMFoiIGZpbGw9IiMxMTIyM0UiLz4KPC9nPgo8L3N2Zz4K" alt="exclamation-mark">
+      <div class="banner__message__text">Вы недополучаете 450 инсталлов в день</div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="table-container">
+      <table>
+        <tbody>
+          <tr class="first-row">
+            <th>
+              <div class="table-manage-panel">
+                <input class="mainCheckbox" type="checkbox">
+                <input class="delete" type="image" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgb3BhY2l0eT0iMC4zIj4KPHBhdGggZD0iTTMgM0gxNVYxNkMxNSAxNi41NTIzIDE0LjU1MjMgMTcgMTQgMTdINEMzLjQ0NzcyIDE3IDMgMTYuNTUyMyAzIDE2VjNaIiBzdHJva2U9IiMxMTIyM0UiIHN0cm9rZS13aWR0aD0iMiIvPgo8cGF0aCBkPSJNNSAxQzUgMC40NDc3MTUgNS40NDc3MiAwIDYgMEgxMkMxMi41NTIzIDAgMTMgMC40NDc3MTUgMTMgMVYySDVWMVoiIGZpbGw9IiMxMTIyM0UiLz4KPHJlY3QgeT0iMiIgd2lkdGg9IjE4IiBoZWlnaHQ9IjIiIGZpbGw9IiMxMTIyM0UiLz4KPHJlY3QgeD0iNiIgeT0iNiIgd2lkdGg9IjIiIGhlaWdodD0iOCIgZmlsbD0iIzExMjIzRSIvPgo8cmVjdCB4PSIxMCIgeT0iNiIgd2lkdGg9IjIiIGhlaWdodD0iOCIgZmlsbD0iIzExMjIzRSIvPgo8L2c+Cjwvc3ZnPgo=">
+                <input type="image" class="reload" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTciIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNyAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgb3BhY2l0eT0iMC4zIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik04IDE2QzMuNTgxNzIgMTYgMCAxMi40MTgzIDAgOEMwIDMuNTgxNzIgMy41ODE3MiAwIDggMEMxMS4zNTc0IDAgMTQuMjMxNyAyLjA2ODE3IDE1LjQxODUgNUgxMy4xOTczQzEyLjE1OTkgMy4yMDY2IDEwLjIyMDggMiA4IDJDNC42ODYyOSAyIDIgNC42ODYyOSAyIDhDMiAxMS4zMTM3IDQuNjg2MjkgMTQgOCAxNEMxMC45NzMgMTQgMTMuNDQxIDExLjgzNzcgMTMuOTE3IDlIMTUuOTM4MUMxNS40NDYgMTIuOTQ2MyAxMi4wNzk2IDE2IDggMTZaIiBmaWxsPSIjMTEyMjNFIi8+CjxwYXRoIGQ9Ik0xMSA1SDE1VjEiIHN0cm9rZT0iIzExMjIzRSIgc3Ryb2tlLXdpZHRoPSIyIi8+CjwvZz4KPC9zdmc+Cg==">
+                <input type="image" class="rocket" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyMCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgb3BhY2l0eT0iMC4zIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNC42NjY3IDEwLjk5ODhDMTguODI5MyA3LjQ2NTQgMTkuNzY1OSA0LjM5NDA0IDIwIDAuMDQ1MTk5MUMxNS44Mzc0IC0wLjE5OTQyMyAxMi44MTk1IDAuNDUyOTAzIDkuMDIxMTQgNC4zOTQwNEM3LjI1MjAzIDQuMTc2NiA1LjQzMDg5IDQuNzIwMiA0IDYuMDUyMDNMNi4zNjc0OCA4LjgyNDQyQzUuMjIyNzYgOS45MTE2MyA1LjExODcgMTEuNzg3MSA2LjE1OTM1IDEzLjAxMDJDNi43NTc3MiAxMy42ODk3IDcuNTY0MjMgMTQuMDE1OCA4LjM5Njc1IDEzLjk4ODdDOS4wMjExNCAxMy45NjE1IDkuNjcxNTQgMTMuNzE2OSAxMC4xNjU5IDEzLjIyNzZMMTIuNTMzMyAxNkMxMy45NjQyIDE0LjY5NTMgMTQuNjY2NyAxMi44NDcxIDE0LjY2NjcgMTAuOTk4OFpNMTUuODM3NCAzLjk1OTE1QzE2LjUxMzggNC43NzQ1NiAxNi40NjE4IDUuOTk3NjcgMTUuNjgxMyA2LjczMTU0QzE1LjM0MzEgNy4wMzA1MiAxNC45MjY4IDcuMTkzNiAxNC41MTA2IDcuMjIwNzhDMTMuOTM4MiA3LjI0Nzk2IDEzLjQxNzkgNy4wMDMzNCAxMy4wMjc2IDYuNTY4NDZDMTIuMzUxMiA1Ljc1MzA1IDEyLjQwMzMgNC41Mjk5NCAxMy4xODM3IDMuNzk2MDdDMTMuNDk1OSAzLjQ5NzA5IDEzLjkxMjIgMy4zMzQwMSAxNC4zNTQ1IDMuMzA2ODNDMTQuOTI2OCAzLjI3OTY1IDE1LjQ0NzIgMy41MjQyNyAxNS44Mzc0IDMuOTU5MTVaIiBmaWxsPSIjMTEyMjNFIi8+CjxwYXRoIGQ9Ik0wIDE4TDAuMTM2NTIxIDE3LjU2MjhDMC4xNjM4MjUgMTcuNDUzNiAwLjkyODM0IDE0Ljg1NzkgMS45MTEyOSAxMy44NDdDMi40NTczNyAxMy4zMDA1IDMuMTEyNjcgMTMgMy43MTMzNiAxM0M0LjA5NTYyIDEzIDQuMzk1OTcgMTMuMTA5MyA0LjY0MTcgMTMuMzU1MkM1LjI2OTcgMTMuOTgzNiA1LjA1MTI2IDE1LjE4NTggNC4xNTAyMyAxNi4wODc0QzMuMDg1MzcgMTcuMTUzIDAuNTQ2MDgzIDE3LjgzNjEgMC40MzY4NjYgMTcuODkwN0wwIDE4WiIgZmlsbD0iIzExMjIzRSIvPgo8L2c+Cjwvc3ZnPgo=">
+              </div>
+            </th>
+            <th>
+              <div class="header-total-mark">
+                <div class="text">
+                  <span>Оценка</span>
+                  <span>частотн.</span>
+                </div>
+                <input type="image" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSIzIiB2aWV3Qm94PSIwIDAgNiAzIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBvcGFjaXR5PSIwLjMiIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMCAwSDZMMyAzTDAgMFoiIGZpbGw9IiMxMTIyM0UiLz4KPC9zdmc+Cg==" alt="sortAscending">
+              </div>
+            </th>
+            <td>
+              <div class="td-content">
+                <div class="value">25.06</div>
+                <!-- i can't imagine that block meaningful -->
+                <div class="green-rectangle">30</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">26.06</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">27.06</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">28.06</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">29.06</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">30.06</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">01.07</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">02.07</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">03.07</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">04.07</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">05.07</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">06.07</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">07.07</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">08.07</div>
+              </div>
+            </td>
+          </tr>
+          <tr class="feedback">
+            <th>
+                <div class="th-content">
+                  <input class="checkbox" type="checkbox">
+                  <span>Тинькофф банк отзывы</span>
+                  <input class="star" type="image" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik03IDExLjY2NjdMMi4zMzMzMyAxNEwzLjMwMTQ1IDguOTc5NTFMMCA1LjQ0NDQ0TDQuNzE0MTcgNC42MzE2TDcgMEw5LjI4NTgzIDQuNjMxNkwxNCA1LjQ0NDQ0TDEwLjY5ODYgOC45Nzk1MUwxMS42NjY3IDE0TDcgMTEuNjY2N1oiIGZpbGw9IiNGNUE2MjMiLz4KPC9zdmc+Cg==" alt="selectedStar">
+                  <input class="arrow" type="image" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSIxMCIgdmlld0JveD0iMCAwIDYgMTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0wLjI5Mjg5MiAxLjM1MzU1TDAuOTk5OTk5IDAuNjQ2NDRMNS4zNTM1NSA0Ljk5OTk5TDAuOTk5OTk5IDkuMzUzNTVMMC4yOTI4OTIgOC42NDY0NEwzLjkzOTM0IDQuOTk5OTlMMC4yOTI4OTIgMS4zNTM1NVoiIGZpbGw9IiMxMTIyM0UiLz4KPC9zdmc+Cg==" alt="rightArrow">
+                </div>
+            </th>
+            <th>
+              <div class="total-mark-value">2750</div>
+            </th>
+            <td>
+              <div class="td-content">
+                <div class="rating">
+                  <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSIzIiB2aWV3Qm94PSIwIDAgNiAzIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgMEg2TDMgM0wwIDBaIiBmaWxsPSIjRDAwMjFCIi8+Cjwvc3ZnPgo=" alt="redBottomArrow">
+                  <span class="rating__number_red">1</span>
+                </div>
+                <div class="value">62</div>
+                <div class="green-rectangle">30</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">48</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">37</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">62</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">44</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">89</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">74</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">35</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">62</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">59</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">88</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">24</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">26</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">97</div>
+              </div>
+            </td>
+          </tr>
+          <!-- bank block that has open additional info -->
+          <tr class="bank">
+            <th>
+                <div class="th-content th-content_bank">
+                  <input class="checkbox" type="checkbox">
+                  <span>Тинькофф банк</span>
+                  <input class="arrow-bottom" type="image" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iNiIgdmlld0JveD0iMCAwIDEwIDYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik04LjQ2OTY3IDAuNDY5NjY5TDkuMTc2NzcgMS4xNzY3OEw0LjgyMzIyIDUuNTMwMzNMMC40Njk2NjYgMS4xNzY3OEwxLjE3Njc3IDAuNDY5NjY5TDQuODIzMjIgNC4xMTYxMkw4LjQ2OTY3IDAuNDY5NjY5WiIgZmlsbD0iIzExMjIzRSIvPgo8L3N2Zz4K" alt="bottomArrow">
+                </div>
+            </th>
+            <th>
+              <div class="total-mark-value">4150</div>
+            </th>
+            <td>
+              <div class="td-content">
+                <div class="value">25</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">38</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">76</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">42</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="rating">
+                  <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSIzIiB2aWV3Qm94PSIwIDAgNiAzIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgMEg2TDMgM0wwIDBaIiBmaWxsPSIjRDAwMjFCIi8+Cjwvc3ZnPgo=" alt="redBottomArrow">
+                  <span class="rating__number_red">1</span>
+                </div>
+                <div class="value">67</div>
+                <div class="green-rectangle">30</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="rating">
+                  <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSIzIiB2aWV3Qm94PSIwIDAgNiAzIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgMEg2TDMgM0wwIDBaIiBmaWxsPSIjRDAwMjFCIi8+Cjwvc3ZnPgo=" alt="redBottomArrow">
+                  <span class="rating__number_red">1</span>
+                </div>
+                <div class="value">34</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">74</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">62</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="rating">
+                  <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSIzIiB2aWV3Qm94PSIwIDAgNiAzIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgMEg2TDMgM0wwIDBaIiBmaWxsPSIjRDAwMjFCIi8+Cjwvc3ZnPgo=" alt="redBottomArrow">
+                  <span class="rating__number_red">1</span>
+                </div>
+                <div class="value">74</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">25</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">39</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">53</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">46</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">79</div>
+              </div>
+            </td>
+          </tr>
+          <tr class="additional-info additional-info_first-row">
+            <th></th>
+            <th></th>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/1.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/2.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/3.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/1.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/2.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/3.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/1.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/2.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/3.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/1.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/2.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/3.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/1.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/2.svg" alt="">
+              </div>
+            </td>
+          </tr>
+          <tr class="additional-info">
+            <th></th>
+            <th></th>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/1.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/2.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/3.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/1.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/2.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/3.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/1.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/2.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/3.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/1.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/2.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/3.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/1.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/2.svg" alt="">
+              </div>
+            </td>
+          </tr>
+          <tr class="additional-info additional-info_last-row">
+            <th></th>
+            <th></th>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/1.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/2.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/3.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/1.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/2.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/3.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/1.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/2.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/3.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/1.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/2.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/3.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/1.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <img src="img/table/tbody/additionalInfo/2.svg" alt="">
+              </div>
+            </td>
+          </tr>
+          <tr class="feedback">
+            <th>
+                <div class="th-content">
+                  <input class="checkbox" type="checkbox">
+                  <span>Тинькофф банк отзывы</span>
+                  <input class="star" type="image" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNiAxNyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik04IDEzLjY2NjdMMy4zMzMzMyAxNkw0LjMwMTQ1IDEwLjk3OTVMMSA3LjQ0NDQ0TDUuNzE0MTcgNi42MzE2TDggMkwxMC4yODU4IDYuNjMxNkwxNSA3LjQ0NDQ0TDExLjY5ODYgMTAuOTc5NUwxMi42NjY3IDE2TDggMTMuNjY2N1oiIHN0cm9rZT0iI0I4QkRDNiIvPgo8L3N2Zz4K" alt="star">
+                  <input class="arrow" type="image" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSIxMCIgdmlld0JveD0iMCAwIDYgMTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0wLjI5Mjg5MiAxLjM1MzU1TDAuOTk5OTk5IDAuNjQ2NDRMNS4zNTM1NSA0Ljk5OTk5TDAuOTk5OTk5IDkuMzUzNTVMMC4yOTI4OTIgOC42NDY0NEwzLjkzOTM0IDQuOTk5OTlMMC4yOTI4OTIgMS4zNTM1NVoiIGZpbGw9IiMxMTIyM0UiLz4KPC9zdmc+Cg==" alt="rightArrow">
+                </div>
+            </th>
+            <th>
+              <div class="total-mark-value">2750</div>
+            </th>
+            <td>
+              <div class="td-content">
+                <div class="rating">
+                  <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSIzIiB2aWV3Qm94PSIwIDAgNiAzIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgMEg2TDMgM0wwIDBaIiBmaWxsPSIjRDAwMjFCIi8+Cjwvc3ZnPgo=" alt="redBottomArrow">
+                  <span class="rating__number_red">1</span>
+                </div>
+                <div class="value">62</div>
+                <div class="green-rectangle">30</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">48</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">37</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">62</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">44</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">89</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">74</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">35</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">62</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">59</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">88</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">24</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">26</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">97</div>
+              </div>
+            </td>
+          </tr>
+          <tr class="bank">
+            <th>
+                <div class="th-content th-content_bank">
+                  <input class="checkbox" type="checkbox">
+                  <span>Тинькофф банк</span>
+                  <input class="arrow-right" type="image" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSIxMCIgdmlld0JveD0iMCAwIDYgMTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0wLjI5Mjg5MiAxLjM1MzU1TDAuOTk5OTk5IDAuNjQ2NDRMNS4zNTM1NSA0Ljk5OTk5TDAuOTk5OTk5IDkuMzUzNTVMMC4yOTI4OTIgOC42NDY0NEwzLjkzOTM0IDQuOTk5OTlMMC4yOTI4OTIgMS4zNTM1NVoiIGZpbGw9IiMxMTIyM0UiLz4KPC9zdmc+Cg==" alt="rightArrow">
+                </div>
+            </th>
+            <th>
+              <div class="total-mark-value">4150</div>
+            </th>
+            <td>
+              <div class="td-content">
+                <div class="value">25</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">38</div>
+              </div>
+            </td>
+            <td class="bg-color-light-green">
+              <div class="td-content">
+                <div class="rating">
+                  <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSIzIiB2aWV3Qm94PSIwIDAgNiAzIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgM0g2TDMgMEwwIDNaIiBmaWxsPSIjNDE3NTA1Ii8+Cjwvc3ZnPgo=" alt="greenUpArrow">
+                  <span class="rating__number_green">1</span>
+                </div>
+                <div class="value">76</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">42</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="rating">
+                  <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSIzIiB2aWV3Qm94PSIwIDAgNiAzIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgMEg2TDMgM0wwIDBaIiBmaWxsPSIjRDAwMjFCIi8+Cjwvc3ZnPgo=" alt="redBottomArrow">
+                  <span class="rating__number_red">1</span>
+                </div>
+                <div class="value">67</div>
+                <div class="green-rectangle">30</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="rating">
+                  <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSIzIiB2aWV3Qm94PSIwIDAgNiAzIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgMEg2TDMgM0wwIDBaIiBmaWxsPSIjRDAwMjFCIi8+Cjwvc3ZnPgo=" alt="redBottomArrow">
+                  <span class="rating__number_red">1</span>
+                </div>
+                <div class="value">34</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">74</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">62</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="rating">
+                  <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSIzIiB2aWV3Qm94PSIwIDAgNiAzIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgMEg2TDMgM0wwIDBaIiBmaWxsPSIjRDAwMjFCIi8+Cjwvc3ZnPgo=" alt="redBottomArrow">
+                  <span class="rating__number_red">1</span>
+                </div>
+                <div class="value">74</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">25</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">39</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">53</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">46</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">79</div>
+              </div>
+            </td>
+          </tr>
+          <tr class="feedback">
+            <th>
+                <div class="th-content">
+                  <input class="checkbox" type="checkbox">
+                  <span>Тинькофф банк отзывы</span>
+                  <input class="arrow no-star" type="image" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSIxMCIgdmlld0JveD0iMCAwIDYgMTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0wLjI5Mjg5MiAxLjM1MzU1TDAuOTk5OTk5IDAuNjQ2NDRMNS4zNTM1NSA0Ljk5OTk5TDAuOTk5OTk5IDkuMzUzNTVMMC4yOTI4OTIgOC42NDY0NEwzLjkzOTM0IDQuOTk5OTlMMC4yOTI4OTIgMS4zNTM1NVoiIGZpbGw9IiMxMTIyM0UiLz4KPC9zdmc+Cg==" alt="rightArrow">
+                </div>
+            </th>
+            <th>
+              <div class="total-mark-value">2750</div>
+            </th>
+            <td>
+              <div class="td-content">
+                <div class="rating">
+                  <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSIzIiB2aWV3Qm94PSIwIDAgNiAzIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgMEg2TDMgM0wwIDBaIiBmaWxsPSIjRDAwMjFCIi8+Cjwvc3ZnPgo=" alt="redBottomArrow">
+                  <span class="rating__number_red">1</span>
+                </div>
+                <div class="value">62</div>
+                <div class="green-rectangle">30</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">48</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">37</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">62</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">44</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">89</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">74</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">35</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">62</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">59</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">88</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">24</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">26</div>
+              </div>
+            </td>
+            <td class="bg-color-light-green">
+              <div class="td-content">
+                <div class="rating rating-text">
+                  new
+                </div>
+                <div class="value">97</div>
+                <div class="green-rectangle">30</div>
+              </div>
+            </td>
+          </tr>
+          <tr class="bank">
+            <th>
+                <div class="th-content th-content_bank">
+                  <input class="checkbox" type="checkbox">
+                  <span>Тинькофф банк</span>
+                  <input class="arrow-right" type="image" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSIxMCIgdmlld0JveD0iMCAwIDYgMTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0wLjI5Mjg5MiAxLjM1MzU1TDAuOTk5OTk5IDAuNjQ2NDRMNS4zNTM1NSA0Ljk5OTk5TDAuOTk5OTk5IDkuMzUzNTVMMC4yOTI4OTIgOC42NDY0NEwzLjkzOTM0IDQuOTk5OTlMMC4yOTI4OTIgMS4zNTM1NVoiIGZpbGw9IiMxMTIyM0UiLz4KPC9zdmc+Cg==" alt="rightArrow">
+                </div>
+            </th>
+            <th>
+              <div class="total-mark-value">4150</div>
+            </th>
+            <td>
+              <div class="td-content">
+                <div class="value">25</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">38</div>
+              </div>
+            </td>
+            <td class="bg-color-light-green">
+              <div class="td-content">
+                <div class="rating">
+                  <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSIzIiB2aWV3Qm94PSIwIDAgNiAzIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgM0g2TDMgMEwwIDNaIiBmaWxsPSIjNDE3NTA1Ii8+Cjwvc3ZnPgo=" alt="greenUpArrow">
+                  <span class="rating__number_green">1</span>
+                </div>
+                <div class="value">76</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">42</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="rating">
+                  <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSIzIiB2aWV3Qm94PSIwIDAgNiAzIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgMEg2TDMgM0wwIDBaIiBmaWxsPSIjRDAwMjFCIi8+Cjwvc3ZnPgo=" alt="redBottomArrow">
+                  <span class="rating__number_red">1</span>
+                </div>
+                <div class="value">67</div>
+                <div class="green-rectangle">30</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="rating">
+                  <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSIzIiB2aWV3Qm94PSIwIDAgNiAzIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgMEg2TDMgM0wwIDBaIiBmaWxsPSIjRDAwMjFCIi8+Cjwvc3ZnPgo=" alt="redBottomArrow">
+                  <span class="rating__number_red">1</span>
+                </div>
+                <div class="value">34</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">74</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">62</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="rating">
+                  <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSIzIiB2aWV3Qm94PSIwIDAgNiAzIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgMEg2TDMgM0wwIDBaIiBmaWxsPSIjRDAwMjFCIi8+Cjwvc3ZnPgo=" alt="redBottomArrow">
+                  <span class="rating__number_red">1</span>
+                </div>
+                <div class="value">74</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">25</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">39</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">53</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">46</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">79</div>
+              </div>
+            </td>
+          </tr>
+          <tr class="feedback">
+            <th>
+                <div class="th-content">
+                  <input class="checkbox" type="checkbox">
+                  <span>Тинькофф банк отзывы</span>
+                  <input class="star" type="image" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik03IDExLjY2NjdMMi4zMzMzMyAxNEwzLjMwMTQ1IDguOTc5NTFMMCA1LjQ0NDQ0TDQuNzE0MTcgNC42MzE2TDcgMEw5LjI4NTgzIDQuNjMxNkwxNCA1LjQ0NDQ0TDEwLjY5ODYgOC45Nzk1MUwxMS42NjY3IDE0TDcgMTEuNjY2N1oiIGZpbGw9IiNGNUE2MjMiLz4KPC9zdmc+Cg==" alt="selectedStar">
+                  <input class="arrow" type="image" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSIxMCIgdmlld0JveD0iMCAwIDYgMTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0wLjI5Mjg5MiAxLjM1MzU1TDAuOTk5OTk5IDAuNjQ2NDRMNS4zNTM1NSA0Ljk5OTk5TDAuOTk5OTk5IDkuMzUzNTVMMC4yOTI4OTIgOC42NDY0NEwzLjkzOTM0IDQuOTk5OTlMMC4yOTI4OTIgMS4zNTM1NVoiIGZpbGw9IiMxMTIyM0UiLz4KPC9zdmc+Cg==" alt="rightArrow">
+                </div>
+            </th>
+            <th>
+              <div class="total-mark-value">2750</div>
+            </th>
+            <td>
+              <div class="td-content">
+                <div class="rating">
+                  <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSIzIiB2aWV3Qm94PSIwIDAgNiAzIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgMEg2TDMgM0wwIDBaIiBmaWxsPSIjRDAwMjFCIi8+Cjwvc3ZnPgo=" alt="redBottomArrow">
+                  <span class="rating__number_red">1</span>
+                </div>
+                <div class="value">62</div>
+                <div class="green-rectangle">30</div>
+              </div>
+            </td>
+            <td class="bg-color-light-red">
+              <div class="td-content">
+                <div class="rating">
+                  <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSIzIiB2aWV3Qm94PSIwIDAgNiAzIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgMEg2TDMgM0wwIDBaIiBmaWxsPSIjRDAwMjFCIi8+Cjwvc3ZnPgo=" alt="redBottomArrow">
+                  <span class="rating__number_red">1</span>
+                </div>
+                <div class="value">48</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">37</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">62</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">44</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">89</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">74</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">35</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">62</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">59</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">88</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">24</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">26</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="value">97</div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

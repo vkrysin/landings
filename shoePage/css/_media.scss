@@ -1,0 +1,154 @@
+@import './functions';
+
+$content-width: 100vw - get-vw(320px);
+
+$bg-img-width: $content-width - get-vw(200px);
+$bg-img-height: $content-width - get-vw(200px);
+
+@media screen and (max-width: 1500px) {
+
+  .content {
+
+    .product {
+      width: $content-width;
+      background-size: $bg-img-width $bg-img-height;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+
+  .content {
+
+    .product {
+      width: $content-width - get-vw(100px);
+      background: none;
+
+      .product__img {
+        display: block;
+        height: 500px;
+
+        img {
+          width: 600px;
+          height: 500px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1025px) {
+
+  .content {
+
+    .product {
+      width: $content-width - get-vw(200px);
+      background: none;
+
+      .product__img {
+        display: block;
+        height: 400px;
+
+        img {
+          width: 500px;
+          height: 400px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 910px) {
+
+  .content {
+    flex-direction: column;
+
+    .left {
+
+      nav {
+        display: flex;
+      }
+
+      .item {
+        margin-top: 0;
+        margin-left: 50px;
+      }
+
+      .slogan {
+        display: none;
+      }
+    }
+
+    .product {
+      margin-top: 0;
+      width: $content-width - get-vw(200px);
+      background: none;
+
+      .product__img {
+        display: block;
+        height: 400px;
+
+        img {
+          width: 500px;
+          height: 400px;
+        }
+      }
+    }
+
+    .right {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+
+  .content {
+
+    .left {
+      margin-top: 50px;
+
+      .item__menu {
+        display: block;
+      }
+      .item {
+        display: none;
+      }
+    }
+    .product {
+      width: $content-width;
+      background-size: $bg-img-width $bg-img-height;
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+
+  .content {
+
+    .product {
+      margin-left: 50px;
+
+      .product__header {
+        margin-top: 20px;
+      }
+
+      .product__img {
+        display: block;
+        height: 300px;
+
+        img {
+          width: 300px;
+          height: 300px;
+        }
+      }
+      .buttons-panel {
+        flex-direction: column;
+
+        .buttons-panel__watch-btn {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
