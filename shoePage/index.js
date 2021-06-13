@@ -1,4 +1,5 @@
 // dropdown menu
+import './styles.scss';
 
 const dropdownMenu = document.querySelector('.item__menu');
 

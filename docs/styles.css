@@ -9,3 +9,8 @@ a {
 li {
   margin-top: 10px;
 }
+li > div {
+  margin-left: 10px;
+  display: inline-block;
+  font-size: 20px;
+}
