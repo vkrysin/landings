@@ -1,4 +1,8 @@
 // dropdown menu
+<<<<<<< HEAD
+=======
+import './styles.scss';
+>>>>>>> master
 
 const dropdownMenu = document.querySelector('.item__menu');
 

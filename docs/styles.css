@@ -9,3 +9,11 @@ a {
 li {
   margin-top: 10px;
 }
+<<<<<<< HEAD
+=======
+li > div {
+  margin-left: 10px;
+  display: inline-block;
+  font-size: 20px;
+}
+>>>>>>> master
