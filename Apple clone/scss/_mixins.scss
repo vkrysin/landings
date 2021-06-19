@@ -1,0 +1,11 @@
+@mixin connectFont($family, $weight: 400, $size: 16px, $color: 'black') {
+  font-family: $family, serif;
+  font-weight: $weight;
+  font-size: $size;
+  color: $color;
+}
+
+@mixin setBackgroundImg($url, $repeat: no-repeat) {
+  background-image: url($url);
+  background-repeat: $repeat;
+}

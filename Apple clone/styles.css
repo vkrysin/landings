@@ -1,0 +1,100 @@
+header {
+  position: relative;
+  width: 100%;
+  height: 45px;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.75);
+  transition: height 0.4s linear, background-color 0.5s ease;
+}
+
+.menu {
+  width: 100%;
+}
+
+.modal-header {
+  height: 100vh;
+  background-color: black;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  width: 16px;
+  height: 44px;
+  background-image: url("../img/apple-logo.svg");
+  background-repeat: no-repeat;
+}
+
+.shopping-bag {
+  margin-right: 20px;
+  width: 17px;
+  height: 47px;
+  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), display 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  background-image: url("../img/bag.svg");
+  background-repeat: no-repeat;
+}
+
+.shopping-bag_opacity-0 {
+  opacity: 0;
+}
+
+.menu-icon {
+  margin-top: 8px;
+  margin-left: 12px;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  opacity: 0.8;
+}
+.menu-icon:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.menu-icon__top,
+.menu-icon__bottom {
+  position: absolute;
+  left: 7px;
+  width: 17px;
+  height: 1px;
+  background: #fff;
+  transition: transform 0.2s cubic-bezier(0.34, 0.85, 0.85, 0.42);
+}
+
+.menu-icon__top {
+  top: 10px;
+}
+
+.menu-icon__bottom {
+  top: 16px;
+}
+
+.menu-icon__top_rotate45deg {
+  top: 12px;
+  transform: rotate(45deg);
+}
+
+.menu-icon__bottom_rotate-45deg {
+  top: 12px;
+  transform: rotate(-45deg);
+}
+
+.dropdown-menu__search {
+  padding: 0 10px;
+}
+.dropdown-menu__search input {
+  width: 100%;
+  height: 36px;
+  background-image: url("../img/search-icon.svg");
+  background-repeat: no-repeat;
+}
+
+.display-none {
+  display: none;
+}
+
+body {
+  margin: 0;
+}
+
+/*# sourceMappingURL=styles.css.map */
