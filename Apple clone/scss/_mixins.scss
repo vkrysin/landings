@@ -5,7 +5,22 @@
   color: $color;
 }
 
-@mixin setBackgroundImg($url, $repeat: no-repeat) {
+@mixin setBackgroundImg(
+  $url,
+  $repeat: no-repeat,
+  $width: false,
+  $height: false,
+  $left: false,
+  $top: false,
+  ) {
   background-image: url($url);
   background-repeat: $repeat;
+
+  @if $width and $height {
+    background-size: $width $height;
+  }
+
+  @if $left and $top {
+    background-position: $left $top;
+  }
 }

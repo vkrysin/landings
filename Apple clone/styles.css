@@ -1,10 +1,55 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "RobotoSlab";
+  src: url("../fonts/RobotoSlab-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "RobotoSlab";
+  src: url("../fonts/RobotoSlab-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "RobotoSlab";
+  src: url("../fonts/RobotoSlab-Light.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "RobotoSlab";
+  src: url("../fonts/RobotoSlab-Light.ttf");
+  font-weight: 300;
+}
 header {
-  position: relative;
-  width: 100%;
   height: 45px;
   display: flex;
+  justify-content: center;
   background-color: rgba(0, 0, 0, 0.75);
-  transition: height 0.4s linear, background-color 0.5s ease;
+  transition: height 0.4s linear, background-color 0.5s cubic-bezier(0.32, 0.08, 0.24, 1);
+}
+
+.header-container {
+  position: relative;
+  width: 100%;
+  display: flex;
 }
 
 .menu {
@@ -13,6 +58,7 @@ header {
 
 .modal-header {
   height: 100vh;
+  overflow-y: scroll;
   background-color: black;
 }
 
@@ -26,10 +72,11 @@ header {
 }
 
 .shopping-bag {
-  margin-right: 20px;
+  position: absolute;
+  left: calc(100% - 37px);
   width: 17px;
   height: 47px;
-  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), display 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
   background-image: url("../img/bag.svg");
   background-repeat: no-repeat;
 }
@@ -79,18 +126,162 @@ header {
   transform: rotate(-45deg);
 }
 
+.dropdown-menu {
+  padding: 0;
+  margin-top: 10px;
+  display: none;
+}
+
 .dropdown-menu__search {
-  padding: 0 10px;
+  padding: 0 10px 15px 10px;
+  display: flex;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.5);
 }
 .dropdown-menu__search input {
-  width: 100%;
+  padding-left: 32px;
   height: 36px;
+  width: calc(100% - 30px);
+  border: none;
+  border-radius: 8px;
+  background-color: #1d1d1f;
+  transition: width 22s linear;
   background-image: url("../img/search-icon.svg");
   background-repeat: no-repeat;
+  background-size: 14px 17px;
+  background-position: 9px 9px;
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-size: 17px;
+  color: white;
+}
+.dropdown-menu__search input::placeholder {
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-size: 17px;
+  color: #6e6e73;
+}
+
+.cancel-btn {
+  margin-left: 15px;
+  display: none;
+  align-items: center;
+  border: none;
+  background-color: black;
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-size: 17px;
+  color: #2997ff;
+}
+
+.dropdown-menu__item {
+  margin: 0 40px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+}
+.dropdown-menu__item a {
+  text-decoration: none;
+  font-family: "Roboto", serif;
+  font-weight: 300;
+  font-size: 15px;
+  color: #fff;
+}
+.dropdown-menu__item:last-of-type {
+  border-bottom: none;
+}
+
+.dropdown-menu__item_animation-first-forward {
+  animation-duration: 0.5s;
+  animation-name: firstItemAnimationForward;
+}
+
+@keyframes firstItemAnimationForward {
+  from {
+    margin-top: 0;
+    opacity: 1;
+  }
+  to {
+    margin-top: 20px;
+    opacity: 0;
+  }
+}
+.dropdown-menu__item_animation-forward {
+  animation-duration: 0.5s;
+  animation-name: itemAnimationForward;
+}
+
+@keyframes itemAnimationForward {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.dropdown-menu__item_animation-first-back {
+  animation-duration: 0.5s;
+  animation-name: firstItemAnimationBack;
+}
+
+@keyframes firstItemAnimationBack {
+  from {
+    margin-top: 20px;
+    opacity: 0;
+  }
+  to {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+.dropdown-menu__item_animation-back {
+  animation-duration: 0.5s;
+  animation-name: itemAnimationBack;
+}
+
+@keyframes itemAnimationBack {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 767px) {
+  header {
+    background-color: rgba(0, 0, 0, 0.75);
+    transition-property: none;
+  }
+
+  .header-container {
+    max-width: 1000px;
+  }
+  .header-container .dropdown-menu {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .logo {
+    left: 5%;
+  }
+}
+* {
+  box-sizing: border-box;
 }
 
 .display-none {
   display: none;
+}
+
+.display-block {
+  display: block;
+}
+
+.display-flex {
+  display: flex;
 }
 
 body {

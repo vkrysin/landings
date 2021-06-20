@@ -1,8 +1,22 @@
+@import 'scss/fonts';
 @import 'scss/_header.scss';
 @import 'node_modules/normalize-scss/sass/normalize';
+@import 'scss/media.scss';
+
+* {
+  box-sizing: border-box;
+}
 
 .display-none {
   display: none;
+}
+
+.display-block {
+  display: block;
+}
+
+.display-flex {
+  display: flex;
 }
 
 body {

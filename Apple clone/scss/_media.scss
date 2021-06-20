@@ -1,0 +1,22 @@
+@media screen and (min-width: 767px) {
+  header {
+    background-color: rgba(0, 0, 0, 0.75);
+    transition-property: none;
+  }
+
+  .header-container {
+    max-width: 1000px;
+
+    .dropdown-menu {
+      display: flex;
+    }
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .logo {
+    left: 5%;
+  }
+}
