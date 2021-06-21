@@ -107,7 +107,7 @@ header {
     border-radius: 8px;
     background-color: rgb(29, 29, 31);
 
-    transition: width 22s linear;
+    transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
     @include setBackgroundImg(
       '../img/search-icon.svg',
@@ -133,6 +133,11 @@ header {
     border: none;
     background-color: rgb(0, 0, 0);
     @include connectFont('Roboto', 400, 17px, #2997ff);
+
+    &:active {
+      opacity: 0.8;
+      background-color: wheat;
+    }
 }
 
 .dropdown-menu__item {
@@ -141,7 +146,6 @@ header {
   display: flex;
   align-items: center;
   border-bottom: 1px solid rgba(128, 128, 128, 0.5);
-
 
   a {
     text-decoration: none;
@@ -214,5 +218,60 @@ header {
 
   to {
     opacity: 1;
+  }
+}
+
+.dropdown-menu__search_raise-up {
+  animation-duration: 0.5s;
+  animation-name: raise-up;
+}
+
+@keyframes raise-up {
+  from {
+    margin-top: 48px;
+  }
+
+  to {
+    margin-top: 10px;
+  }
+}
+
+.dropdown-menu__search_fall-down {
+  animation-duration: 0.5s;
+  animation-name: fall-down;
+}
+
+@keyframes fall-down {
+  from {
+    margin-top: 10px;
+  }
+
+  to {
+    margin-top: 52px;
+  }
+}
+
+.search-icon-container {
+  display: none;
+}
+
+.search-icon {
+  width: 32px;
+  height: 32px;
+  display: block;
+  border: none;
+  background-color: transparent;
+
+  @include setBackgroundImg(
+    'img/search-icon.svg',
+    $width: 18px,
+    $height: 44px,
+    $top: -5px,
+    $left: 0,
+  );
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
   }
 }
