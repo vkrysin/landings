@@ -133,11 +133,6 @@ header {
     border: none;
     background-color: rgb(0, 0, 0);
     @include connectFont('Roboto', 400, 17px, #2997ff);
-
-    &:active {
-      opacity: 0.8;
-      background-color: wheat;
-    }
 }
 
 .dropdown-menu__item {

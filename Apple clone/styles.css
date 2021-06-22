@@ -172,10 +172,6 @@ header {
   font-size: 17px;
   color: #2997ff;
 }
-.cancel-btn:active {
-  opacity: 0.8;
-  background-color: wheat;
-}
 
 .dropdown-menu__item {
   margin: 0 40px;
@@ -295,6 +291,48 @@ header {
 .search-icon:hover {
   cursor: pointer;
   opacity: 0.8;
+}
+
+main {
+  background-color: #fff;
+}
+
+.shop-online-notification {
+  padding: 5px 0;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fbfbfd;
+}
+
+.shop-online-notification__text {
+  width: 82%;
+  max-width: 600px;
+  text-align: center;
+  font-family: "RobotoSlab", serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: black;
+}
+.shop-online-notification__text a {
+  text-decoration: none;
+  color: #06c;
+}
+
+.advertising-item__img-wrapper {
+  position: relative;
+}
+
+.advertising-item__img {
+  position: absolute;
+  left: 50%;
+  width: 3010px;
+  height: 624px;
+  transform: translateX(-50%);
+  background-image: url("../img/iphone_12_updated__jepm2xpxncuy_large_2x.jpg");
+  background-repeat: no-repeat;
+  background-size: 3010px 624px;
 }
 
 @media screen and (min-width: 767px) {

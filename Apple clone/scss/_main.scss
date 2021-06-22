@@ -1,0 +1,44 @@
+@import './mixins';
+
+main {
+  background-color: #fff;
+}
+
+.shop-online-notification {
+  padding: 5px 0;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fbfbfd;
+}
+
+.shop-online-notification__text {
+  width: 82%;
+  max-width: 600px;
+  text-align: center;
+
+  @include connectFont('RobotoSlab', 400, 14px, rgb(0, 0, 0));
+
+  a {
+    text-decoration: none;
+    color: #06c;
+  }
+}
+
+.advertising-item__img-wrapper {
+  position: relative;
+}
+
+.advertising-item__img {
+  position: absolute;
+  left: 50%;
+  width: 3010px;
+  height: 624px;
+  transform: translateX(-50%);
+  @include setBackgroundImg(
+    '../img/iphone_12_updated__jepm2xpxncuy_large_2x.jpg',
+    $width: 3010px,
+    $height: 624px,
+  )
+}
