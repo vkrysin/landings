@@ -1,7 +1,7 @@
 @import './mixins';
 
 main {
-  background-color: #fff;
+  background-color: #fbfbfd;
 }
 
 .shop-online-notification {
@@ -26,19 +26,70 @@ main {
   }
 }
 
-.advertising-item__img-wrapper {
+.advertising-item {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.advertising-item__header {
+  margin-bottom: 0;
+  @include connectFont('Roboto', 600, 42px, rgb(29, 29, 31));
+}
+
+.advertising-item__subhead {
+  margin-top: 15px;
+  margin-bottom: 0;
+  @include connectFont('Roboto', 400, 19px, rgb(29, 29, 31));
+}
+
+.advertising-item__pricing-info {
+  max-width: 400px;
+  @include connectFont('RobotoSlab', 400, 16px, rgb(134, 134, 139));
+}
+
+.cta-links {
+  display: flex;
+}
+
+.cta-links__learn,
+.cta-links__buy {
+  color: rgb(0, 102, 204);
+  text-decoration: none;
+  @include connectFont('RobotoSlab', 400, 21px, rgb(0, 102, 204));
+
+  &:active {
+    text-decoration-color: rgb(0, 102, 204);
+    text-decoration: underline;
+  }
+
+  &::after {
+    margin-left: 5px;
+    display:inline-block;
+    content: ' >';
+  }
+}
+
+.cta-links__buy {
+  margin-left: 10px;
+}
+
+
+.advertising-item__img-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 548px;
+  overflow: hidden;
+  z-index: -1;
 }
 
 .advertising-item__img {
   position: absolute;
   left: 50%;
-  width: 3010px;
-  height: 624px;
+  width: 734px;
+  height: 548px;
   transform: translateX(-50%);
-  @include setBackgroundImg(
-    '../img/iphone_12_updated__jepm2xpxncuy_large_2x.jpg',
-    $width: 3010px,
-    $height: 624px,
-  )
 }
+

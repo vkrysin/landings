@@ -1,4 +1,5 @@
 @media screen and (min-width: 767px) {
+  // header
   header {
     background-color: rgba(0, 0, 0, 0.75);
     transition-property: none;
@@ -40,5 +41,19 @@
 
   .search-icon-container {
     display: flex;
+  }
+
+  // menu
+
+  .advertising-item__header {
+    font-size: 56px;
+  }
+
+  .advertising-item__subhead {
+    font-size: 28px;
+  }
+
+  .advertising-item__img {
+    width: 3010px;
   }
 }
