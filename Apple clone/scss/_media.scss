@@ -43,7 +43,11 @@
     display: flex;
   }
 
-  // menu
+  // main
+
+  .advertising-item {
+    height: 650px;
+  }
 
   .advertising-item__header {
     font-size: 56px;
@@ -51,6 +55,11 @@
 
   .advertising-item__subhead {
     font-size: 28px;
+  }
+
+  .advertising-item__img-wrapper {
+    top: 15px;
+    height: 617px;
   }
 
   .advertising-item__img {

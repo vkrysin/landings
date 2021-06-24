@@ -10,7 +10,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fbfbfd;
+  background-color: #f1f1f1;
 }
 
 .shop-online-notification__text {
@@ -26,17 +26,24 @@ main {
   }
 }
 
+.advertising {
+  display: flex;
+  flex-direction: column;
+}
+
 .advertising-item {
   position: relative;
+  height: 548px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  z-index: 1;
 }
 
 .advertising-item__header {
   margin-bottom: 0;
-  @include connectFont('Roboto', 600, 42px, rgb(29, 29, 31));
+  @include connectFont('Roboto', 600, 32px, rgb(29, 29, 31));
 }
 
 .advertising-item__subhead {
@@ -45,9 +52,20 @@ main {
   @include connectFont('Roboto', 400, 19px, rgb(29, 29, 31));
 }
 
+.advertising-item__header_white,
+.advertising-item__subhead_white {
+  color: rgb(245, 245, 247);
+}
+
 .advertising-item__pricing-info {
-  max-width: 400px;
+  max-width: 225px;
   @include connectFont('RobotoSlab', 400, 16px, rgb(134, 134, 139));
+
+  span {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+  }
 }
 
 .cta-links {
@@ -79,7 +97,9 @@ main {
 
 .advertising-item__img-wrapper {
   position: absolute;
+  top: 0;
   width: 100%;
+  max-width: 2500px;
   height: 548px;
   overflow: hidden;
   z-index: -1;
@@ -89,7 +109,6 @@ main {
   position: absolute;
   left: 50%;
   width: 734px;
-  height: 548px;
   transform: translateX(-50%);
 }
 
