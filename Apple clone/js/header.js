@@ -29,6 +29,7 @@ window.addEventListener('resize', () => {
 });
 
 search.addEventListener('focus', () => {
+  cancelBtn.classList.add('display-flex');
   const listItems = dropdownMenu.querySelectorAll('.dropdown-menu__item');
 
   listItems[0].classList.add('dropdown-menu__item_animation-first-forward');
@@ -47,7 +48,6 @@ search.addEventListener('focus', () => {
 
   setTimeout(() => {
     listItems.forEach((item) => {
-      cancelBtn.classList.add('display-flex');
       item.classList.remove(
         'dropdown-menu__item_animation-first-forward',
          'dropdown-menu__item_animation-forward'
@@ -55,15 +55,15 @@ search.addEventListener('focus', () => {
       item.classList.add('display-none');
     });
     dropdownMenu.classList.remove('dropdown-menu__search_raise-up');
-  }, 300);
+  }, 200);
 });
 
 cancelBtn.addEventListener('click', function() {
-  this.classList.remove('display-flex');
+  cancelBtn.classList.remove('display-flex');
   const listItems = dropdownMenu.querySelectorAll('.dropdown-menu__item');
 
-  listItems[0].classList.add('dropdown-menu__item_animation-first-back');
   listItems[0].classList.remove('display-none');
+  listItems[0].classList.add('dropdown-menu__item_animation-first-back');
 
   for (let i = 1; i < listItems.length; i++) {
     listItems[i].classList.remove('display-none');
@@ -71,8 +71,10 @@ cancelBtn.addEventListener('click', function() {
   }
   console.log(listItems[0].classList);
   dropdownMenu.classList.add('dropdown-menu__search_fall-down');
+  // fdfs
   search.style.width = parseInt(window.getComputedStyle(search).getPropertyValue('width')) + 60 + 'px';
 
+  console.log('CLICK');
   setTimeout(() => {
     console.log(window.getComputedStyle(cancelBtn).getPropertyValue('display'));
     listItems.forEach((item) => {

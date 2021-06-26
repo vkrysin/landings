@@ -26,7 +26,7 @@ main {
   }
 }
 
-.advertising {
+.advertising-heroes {
   display: flex;
   flex-direction: column;
 }
@@ -46,10 +46,52 @@ main {
   @include connectFont('Roboto', 600, 32px, rgb(29, 29, 31));
 }
 
+.advertising-item__header_apple-watch {
+  width: 90%;
+  height: 45px;
+  @include setBackgroundImg(
+    '../img/promo_logo_watch_series_6_lte__el1kwqt2v52e_small_2x.png',
+    $width: 117px,
+    $height: 45px,
+    $top: 50%,
+    $left: 50%
+    );
+}
+
+.advertising-item__header_fitness {
+  width: 90%;
+  height: 27px;
+  @include setBackgroundImg(
+    '../img/logo__fitness_medium_2x.png',
+    $width: 140px,
+    $height: 27px,
+    $top: 50%,
+    $left: 50%
+    );
+}
+
+.advertising-item__header_card {
+  width: 90%;
+  height: 29px;
+  @include setBackgroundImg(
+    '../img/card_small_2x.png',
+    $width: 111px,
+    $height: 29px,
+    $top: 50%,
+    $left: 50%
+    );
+}
+
 .advertising-item__subhead {
   margin-top: 15px;
   margin-bottom: 0;
   @include connectFont('Roboto', 400, 19px, rgb(29, 29, 31));
+}
+
+.advertising-item__subhead_airpods {
+  margin-top: 40px;
+  max-width: 290px;
+  @include connectFont('Roboto', 500, 32px, rgb(29, 29, 31));
 }
 
 .advertising-item__header_white,
@@ -69,14 +111,24 @@ main {
 }
 
 .cta-links {
+  margin-top: 10px;
   display: flex;
+  justify-content: space-between;
+
+  & > * {
+    margin-left: 10px;
+  }
 }
 
-.cta-links__learn,
-.cta-links__buy {
+.cta-links_fitness {
+  width: 250px;
+  margin-left: -10px;
+}
+
+.cta-links__item {
   color: rgb(0, 102, 204);
   text-decoration: none;
-  @include connectFont('RobotoSlab', 400, 21px, rgb(0, 102, 204));
+  @include connectFont('RobotoSlab', 400, 17px, rgb(0, 102, 204));
 
   &:active {
     text-decoration-color: rgb(0, 102, 204);
@@ -105,6 +157,11 @@ main {
   z-index: -1;
 }
 
+.advertising-item__img_fitness {
+  top: 263px;
+  height: 285px;
+}
+
 .advertising-item__img {
   position: absolute;
   left: 50%;
@@ -112,3 +169,11 @@ main {
   transform: translateX(-50%);
 }
 
+.advertising-promo {
+  display: flex;
+  flex-direction: column;
+
+  & > * {
+    margin-top: 10px;
+  }
+}

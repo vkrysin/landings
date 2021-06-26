@@ -320,7 +320,7 @@ main {
   color: #06c;
 }
 
-.advertising {
+.advertising-heroes {
   display: flex;
   flex-direction: column;
 }
@@ -343,12 +343,48 @@ main {
   color: #1d1d1f;
 }
 
+.advertising-item__header_apple-watch {
+  width: 90%;
+  height: 45px;
+  background-image: url("../img/promo_logo_watch_series_6_lte__el1kwqt2v52e_small_2x.png");
+  background-repeat: no-repeat;
+  background-size: 117px 45px;
+  background-position: 50% 50%;
+}
+
+.advertising-item__header_fitness {
+  width: 90%;
+  height: 27px;
+  background-image: url("../img/logo__fitness_medium_2x.png");
+  background-repeat: no-repeat;
+  background-size: 140px 27px;
+  background-position: 50% 50%;
+}
+
+.advertising-item__header_card {
+  width: 90%;
+  height: 29px;
+  background-image: url("../img/card_small_2x.png");
+  background-repeat: no-repeat;
+  background-size: 111px 29px;
+  background-position: 50% 50%;
+}
+
 .advertising-item__subhead {
   margin-top: 15px;
   margin-bottom: 0;
   font-family: "Roboto", serif;
   font-weight: 400;
   font-size: 19px;
+  color: #1d1d1f;
+}
+
+.advertising-item__subhead_airpods {
+  margin-top: 40px;
+  max-width: 290px;
+  font-family: "Roboto", serif;
+  font-weight: 500;
+  font-size: 32px;
   color: #1d1d1f;
 }
 
@@ -371,25 +407,32 @@ main {
 }
 
 .cta-links {
+  margin-top: 10px;
   display: flex;
+  justify-content: space-between;
+}
+.cta-links > * {
+  margin-left: 10px;
 }
 
-.cta-links__learn,
-.cta-links__buy {
+.cta-links_fitness {
+  width: 250px;
+  margin-left: -10px;
+}
+
+.cta-links__item {
   color: #0066cc;
   text-decoration: none;
   font-family: "RobotoSlab", serif;
   font-weight: 400;
-  font-size: 21px;
+  font-size: 17px;
   color: #0066cc;
 }
-.cta-links__learn:active,
-.cta-links__buy:active {
+.cta-links__item:active {
   text-decoration-color: #0066cc;
   text-decoration: underline;
 }
-.cta-links__learn::after,
-.cta-links__buy::after {
+.cta-links__item::after {
   margin-left: 5px;
   display: inline-block;
   content: " >";
@@ -409,11 +452,24 @@ main {
   z-index: -1;
 }
 
+.advertising-item__img_fitness {
+  top: 263px;
+  height: 285px;
+}
+
 .advertising-item__img {
   position: absolute;
   left: 50%;
   width: 734px;
   transform: translateX(-50%);
+}
+
+.advertising-promo {
+  display: flex;
+  flex-direction: column;
+}
+.advertising-promo > * {
+  margin-top: 10px;
 }
 
 @media screen and (min-width: 767px) {
